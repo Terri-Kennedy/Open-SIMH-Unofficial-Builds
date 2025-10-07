@@ -10,7 +10,7 @@ The incentive for this was an offhand comment of mine that Open-SIMH was a kind 
 - Windows 10 32-bit (x86)
 - Windows 10 64-bit (amd64)
 - Windows XP 32-bit (x86)
-- FreeBSD 13 64-bit (amd64)
+- FreeBSD 14 64-bit (amd64)
 - Debian 12/Bookworm (amd64)
 - Raspberry Pi OS Bookworm 32-bit (armhf)
 - Raspberry Pi OS Bookworm 64-bit (aarch64)
