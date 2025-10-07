@@ -1,6 +1,3 @@
-# Repo temporarily incomplete - do not use yet
-I need to push the binary archines as they are greater than the 25MB size limit
-
 # Open SIMH Unofficial Builds
 These are unofficial builds of the Open-SIMH emulator package.
 
