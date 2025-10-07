@@ -1,0 +1,1773 @@
+Script started on 2025-10-05 15:52:56-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+[?2004hroot@spc11d-host:/home/pi/simh# make
+[?2004llib paths are: /lib/ /lib/aarch64-linux-gnu/ /usr/lib/aarch64-linux-gnu/libfakeroot/ /usr/lib/
+include paths are:  /usr/lib/gcc/aarch64-linux-gnu/12/include /usr/local/include /usr/include/aarch64-linux-gnu /usr/include
+using libm: /lib/aarch64-linux-gnu/libm.so
+using librt: /lib/aarch64-linux-gnu/librt.a
+using libpthread: /lib/aarch64-linux-gnu/libpthread.a /usr/include/pthread.h
+using libpcre: /lib/aarch64-linux-gnu/libpcre.so /usr/include/pcre.h
+using semaphore: /usr/include/semaphore.h
+using libdl: /lib/aarch64-linux-gnu/libdl.a /usr/include/dlfcn.h
+using libedit: /usr/include/editline/readline.h
+using zlib: /lib/aarch64-linux-gnu/libz.so /usr/include/zlib.h
+using mman: /usr/include/aarch64-linux-gnu/sys/mman.h
+using libSDL2: /usr/include/SDL2/SDL.h
+*** No SDL ttf support available.  BESM-6 video panel disabled.
+***
+*** Info *** Install the development components of libSDL2-ttf
+*** Info *** packaged for your Linux operating system distribution:
+*** Info ***        $ sudo apt-get install libsdl2-ttf-dev
+using libpcap: /usr/include/pcap.h
+*** Info ***
+*** Info *** all  Simulators are being built with
+*** Info *** minimal libpcap networking support
+*** Info ***
+*** Info ***
+*** Info *** Simulators on your Linux platform can also be built with
+*** Info *** extended LAN Ethernet networking support by using VDE Ethernet.
+*** Info ***
+*** Info *** To build simulator(s) with extended networking support you
+*** Info *** should install the vde2 package to provide this
+*** Info *** functionality for your Linux system:
+*** Info ***        $ sudo apt-get install libvdeplug-dev
+*** Info ***
+***
+*** all  Simulators being built with:
+*** - compiler optimizations and no debugging support. GCC Version: 12.2.0.
+*** - dynamic networking support using Linux provided libpcap components.
+*** - Local LAN packet transports: PCAP TAP NAT(SLiRP)
+*** - video capabilities provided by libSDL2 (Simple Directmedia Layer).
+*** - Per simulator tests will be run.
+***
+*** git commit id is 6e9324e09f4f364346310de34849077c986c29f2.
+*** git commit time is 2025-09-10T21:52:47+0300.
+***
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP1/pdp1_lp.c ./PDP1/pdp1_cpu.c ./PDP1/pdp1_stddev.c ./PDP1/pdp1_sys.c ./PDP1/pdp1_dt.c ./PDP1/pdp1_drm.c ./PDP1/pdp1_clk.c ./PDP1/pdp1_dcs.c ./PDP1/pdp1_dpy.c ./display/display.c ./display/sim_ws.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./PDP1 -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DDISPLAY_TYPE=DIS_TYPE30 -DPIX_SCALE=RES_HALF -o BIN/pdp1 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp1 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-1 simulator.
+*** Good Registers in PDP-1 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP18B/pdp18b_dt.c ./PDP18B/pdp18b_drm.c ./PDP18B/pdp18b_cpu.c ./PDP18B/pdp18b_lp.c ./PDP18B/pdp18b_mt.c ./PDP18B/pdp18b_rf.c ./PDP18B/pdp18b_rp.c ./PDP18B/pdp18b_stddev.c ./PDP18B/pdp18b_sys.c ./PDP18B/pdp18b_rb.c ./PDP18B/pdp18b_tt1.c ./PDP18B/pdp18b_fpp.c ./PDP18B/pdp18b_g2tty.c ./PDP18B/pdp18b_dr15.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DPDP4 -I ./PDP18B -o BIN/pdp4 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp4 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-4 simulator.
+*** Good Registers in PDP-4 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP18B/pdp18b_dt.c ./PDP18B/pdp18b_drm.c ./PDP18B/pdp18b_cpu.c ./PDP18B/pdp18b_lp.c ./PDP18B/pdp18b_mt.c ./PDP18B/pdp18b_rf.c ./PDP18B/pdp18b_rp.c ./PDP18B/pdp18b_stddev.c ./PDP18B/pdp18b_sys.c ./PDP18B/pdp18b_rb.c ./PDP18B/pdp18b_tt1.c ./PDP18B/pdp18b_fpp.c ./PDP18B/pdp18b_g2tty.c ./PDP18B/pdp18b_dr15.c ./PDP18B/pdp18b_dpy.c ./display/display.c ./display/sim_ws.c ./display/type340.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DPDP7 -I ./PDP18B -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DDISPLAY_TYPE=DIS_TYPE30 -DPIX_SCALE=RES_HALF -o BIN/pdp7 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp7 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-7 simulator.
+*** Good Registers in PDP-7 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP8/pdp8_cpu.c ./PDP8/pdp8_clk.c ./PDP8/pdp8_df.c ./PDP8/pdp8_dt.c ./PDP8/pdp8_lp.c ./PDP8/pdp8_mt.c ./PDP8/pdp8_pt.c ./PDP8/pdp8_rf.c ./PDP8/pdp8_rk.c ./PDP8/pdp8_rx.c ./PDP8/pdp8_sys.c ./PDP8/pdp8_tt.c ./PDP8/pdp8_ttx.c ./PDP8/pdp8_rl.c ./PDP8/pdp8_tsc.c ./PDP8/pdp8_td.c ./PDP8/pdp8_ct.c ./PDP8/pdp8_fpp.c ./PDP8/pdp8_dpy.c ./display/display.c ./display/sim_ws.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./PDP8 -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -o BIN/pdp8 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp8 RegisterSanityCheck /home/pi/simh/PDP8/tests/pdp8_test.ini </dev/null 
+ Running internal register sanity checks on PDP-8 simulator.
+*** Good Registers in PDP-8 simulator.
+
+PDP-8 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+** PDP-8: Basic Instruction Test (1): passed
+** PDP-8: Basic Instruction Test (2): passed
+** PDP-8: Adder tests: 
+
+SIMAD
+SIMROT
+FCT
+RANDOM
+
+
+*******7 EXTENDED BANKS OF MEMORY TO BANK 1*******
+
+
+** PDP-8: Adder test passed.
+** PDP-8: Random AND test: passed.
+** PDP-8: Random TAD test: passed.
+** PDP-8: Random ISZ test: 
+
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+FC
+** PDP-8: Random ISZ test: passed.
+** PDP-8: Random DCA test: passed.
+
+!! All Tests Passed !!
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP18B/pdp18b_dt.c ./PDP18B/pdp18b_drm.c ./PDP18B/pdp18b_cpu.c ./PDP18B/pdp18b_lp.c ./PDP18B/pdp18b_mt.c ./PDP18B/pdp18b_rf.c ./PDP18B/pdp18b_rp.c ./PDP18B/pdp18b_stddev.c ./PDP18B/pdp18b_sys.c ./PDP18B/pdp18b_rb.c ./PDP18B/pdp18b_tt1.c ./PDP18B/pdp18b_fpp.c ./PDP18B/pdp18b_g2tty.c ./PDP18B/pdp18b_dr15.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DPDP9 -I ./PDP18B -o BIN/pdp9 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp9 RegisterSanityCheck /home/pi/simh/PDP18B/tests/pdp9_test.ini </dev/null 
+ Running internal register sanity checks on PDP-9 simulator.
+*** Good Registers in PDP-9 simulator.
+
+PDP-9 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running MAINDEC-9A-D01A PDP-9 Instruction Test 1
+HALT instruction, PC: 00000 (CAL 0)
+Passed"
+Running MAINDEC-9A-D02A PDP-9 Instruction Test 2
+HALT instruction, PC: 13030 (CAL 0)
+Passed
+Running MAINDEC-9A-D0DB PDP-9 JMP-Self Test
+HALT instruction, PC: 06256 (CAL 0)
+Passed
+Running MAINDEC-9A-D0EA PDP-9 JMP Y - Interrupt Test
+HALT instruction, PC: 17521 (SPA)
+Passed
+Running MAINDEC-9A-D0FA PDP-9 JMS Y - Interrupt Test
+HALT instruction, PC: 17474 (XOR 17746)
+Passed
+Running MAINDEC-9A-D0BA PDP-9 ISZ Test
+HALT instruction, PC: 17512 (CAL 0)
+Passed
+
+!! All Tests Passed !!
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP18B/pdp18b_dt.c ./PDP18B/pdp18b_drm.c ./PDP18B/pdp18b_cpu.c ./PDP18B/pdp18b_lp.c ./PDP18B/pdp18b_mt.c ./PDP18B/pdp18b_rf.c ./PDP18B/pdp18b_rp.c ./PDP18B/pdp18b_stddev.c ./PDP18B/pdp18b_sys.c ./PDP18B/pdp18b_rb.c ./PDP18B/pdp18b_tt1.c ./PDP18B/pdp18b_fpp.c ./PDP18B/pdp18b_g2tty.c ./PDP18B/pdp18b_dr15.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DPDP15 -I ./PDP18B -o BIN/pdp15 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp15 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-15 simulator.
+*** Good Registers in PDP-15 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP11/pdp11_fp.c ./PDP11/pdp11_cpu.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_cis.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rp.c ./PDP11/pdp11_rx.c ./PDP11/pdp11_stddev.c ./PDP11/pdp11_sys.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_tm.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_io.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_pclk.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_pt.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_xq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_rh.c ./PDP11/pdp11_tu.c ./PDP11/pdp11_cpumod.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_rf.c ./PDP11/pdp11_dl.c ./PDP11/pdp11_ta.c ./PDP11/pdp11_rc.c ./PDP11/pdp11_kg.c ./PDP11/pdp11_ke.c ./PDP11/pdp11_dc.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_kmc.c ./PDP11/pdp11_dup.c ./PDP11/pdp11_rs.c ./PDP11/pdp11_vt.c ./PDP11/pdp11_td.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_rom.c ./PDP11/pdp11_ch.c ./PDP11/pdp11_dh.c ./PDP11/pdp11_ng.c ./PDP11/pdp11_daz.c ./PDP11/pdp11_tv.c ./PDP11/pdp11_mb.c ./PDP11/pdp11_rr.c ./display/display.c ./display/sim_ws.c ./display/ng.c ./display/vt11.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_PDP11 -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp11 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp11 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-11 simulator.
+*** Good Registers in PDP-11 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/pdp10_fe.c ./PDP11/pdp11_dz.c ./PDP10/pdp10_cpu.c ./PDP10/pdp10_ksio.c ./PDP10/pdp10_lp20.c ./PDP10/pdp10_mdfp.c ./PDP10/pdp10_pag.c ./PDP10/pdp10_rp.c ./PDP10/pdp10_sys.c ./PDP10/pdp10_tim.c ./PDP10/pdp10_tu.c ./PDP10/pdp10_xtnd.c ./PDP11/pdp11_pt.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_dup.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_kmc.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ch.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_PDP10 -DUSE_INT64 -I ./PDP10 -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -o BIN/pdp10 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp10 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP-10 simulator.
+*** Good Registers in PDP-10 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_io.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_stddev.c ./VAX/vax_sysdev.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax_syslist.c ./VAX/vax_vc.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_2681.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xq.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_td.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_dup.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+cp BIN/vax BIN/microvax3900
+BIN/vax RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX 3900 simulator.
+*** Good Registers in MicroVAX 3900 simulator.
+
+MicroVAX 3900 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - MicroVAX 3900 Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax610_stddev.c ./VAX/vax610_sysdev.c ./VAX/vax610_io.c ./VAX/vax610_syslist.c ./VAX/vax610_mem.c ./VAX/vax_vc.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_2681.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xq.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_td.c ./PDP11/pdp11_io_lib.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_610 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/microvax1 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax1 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX I (KA610) simulator.
+*** Good Registers in MicroVAX I (KA610) simulator.
+
+MicroVAX I (KA610) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - MicroVAX I (KA610) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax630_stddev.c ./VAX/vax630_sysdev.c ./VAX/vax630_io.c ./VAX/vax630_syslist.c ./VAX/vax_va.c ./VAX/vax_vc.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_2681.c ./VAX/vax_gpx.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xq.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_td.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_dup.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_620 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -o BIN/rtvax1000 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/rtvax1000 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on rtVAX1000 (KA620) simulator.
+*** Good Registers in rtVAX1000 (KA620) simulator.
+
+rtVAX1000 (KA620) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the rtVAX1000 (KA620) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax630_stddev.c ./VAX/vax630_sysdev.c ./VAX/vax630_io.c ./VAX/vax630_syslist.c ./VAX/vax_va.c ./VAX/vax_vc.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_2681.c ./VAX/vax_gpx.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xq.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_td.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_dup.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_630 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/microvax2 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax2 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX II (KA630) simulator.
+*** Good Registers in MicroVAX II (KA630) simulator.
+
+MicroVAX II (KA630) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the MicroVAX II (KA630) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax730_stddev.c ./VAX/vax730_sys.c ./VAX/vax730_mem.c ./VAX/vax730_uba.c ./VAX/vax730_rb.c ./VAX/vax_uw.c ./VAX/vax730_syslist.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_td.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_ch.c ./PDP11/pdp11_dup.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_730 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax730 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vax730 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAX 11/730 simulator.
+*** Good Registers in VAX 11/730 simulator.
+
+VAX 11/730 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EVKAA)
+
+*** PASSED - VAX 11/730 Hardware Core Instruction test EVKAA
+
+
+Starting VAX Diagnostic Supervisor
+
+
+Running - VAX Basic Instructions Exerciser EVKAB
+
+
+*** PASSED - VAX Basic Instructions Exerciser EVKAB
+
+
+Running - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** PASSED - VAX Floating Point Instructions Exerciser EVKAC
+
+
+Running - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** PASSED - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** All Diagnostic Supervisor tests PASSED ***
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax750_stddev.c ./VAX/vax750_cmi.c ./VAX/vax750_mem.c ./VAX/vax750_uba.c ./VAX/vax7x0_mba.c ./VAX/vax_uw.c ./VAX/vax750_syslist.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_rp.c ./PDP11/pdp11_tu.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_dup.c ./PDP11/pdp11_td.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_ch.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_750 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax750 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vax750 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAX 11/750 simulator.
+*** Good Registers in VAX 11/750 simulator.
+
+VAX 11/750 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EVKAA)
+
+*** PASSED - VAX 11/750 Hardware Core Instruction test EVKAA
+
+
+Starting VAX Diagnostic Supervisor
+
+
+Running - VAX Basic Instructions Exerciser EVKAB
+
+
+*** PASSED - VAX Basic Instructions Exerciser EVKAB
+
+
+Running - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** PASSED - VAX Floating Point Instructions Exerciser EVKAC
+
+
+Running - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** PASSED - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** All Diagnostic Supervisor tests PASSED ***
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax780_stddev.c ./VAX/vax780_sbi.c ./VAX/vax780_mem.c ./VAX/vax780_uba.c ./VAX/vax7x0_mba.c ./VAX/vax780_fload.c 	./VAX/vax_uw.c ./VAX/vax780_syslist.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_rp.c ./PDP11/pdp11_tu.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_dup.c ./PDP11/pdp11_td.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_ch.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_780 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax780 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vax780 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAX 11/780 simulator.
+*** Good Registers in VAX 11/780 simulator.
+
+VAX 11/780 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EVKAA)
+
+*** PASSED - VAX 11/780 Hardware Core Instruction test EVKAA
+
+
+Starting VAX Diagnostic Supervisor
+
+
+Running - VAX Basic Instructions Exerciser EVKAB
+
+
+*** PASSED - VAX Basic Instructions Exerciser EVKAB
+
+
+Running - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** PASSED - VAX Floating Point Instructions Exerciser EVKAC
+
+
+Running - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** PASSED - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** All Diagnostic Supervisor tests PASSED ***
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax820_stddev.c ./VAX/vax820_bi.c ./VAX/vax820_mem.c ./VAX/vax820_uba.c ./VAX/vax820_ka.c ./VAX/vax_uw.c ./VAX/vax820_syslist.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_td.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_ch.c ./PDP11/pdp11_dup.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_820 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax8200 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vax8200 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAX 8200 (KA820) simulator.
+*** Good Registers in VAX 8200 (KA820) simulator.
+
+VAX 8200 (KA820) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EVKAA)
+
+*** PASSED - VAX 8200 (KA820) Hardware Core Instruction test EVKAA
+
+
+Starting VAX Diagnostic Supervisor
+
+
+Running - VAX Basic Instructions Exerciser EVKAB
+
+
+*** PASSED - VAX Basic Instructions Exerciser EVKAB
+
+
+Running - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** PASSED - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** All Diagnostic Supervisor tests PASSED ***
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c  ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c  ./VAX/vax_syscm.c ./VAX/vax860_stddev.c ./VAX/vax860_sbia.c ./VAX/vax860_abus.c ./VAX/vax780_uba.c ./VAX/vax7x0_mba.c ./VAX/vax_uw.c ./VAX/vax860_syslist.c ./PDP11/pdp11_rl.c ./PDP11/pdp11_rq.c ./PDP11/pdp11_ts.c ./PDP11/pdp11_dz.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_tq.c ./PDP11/pdp11_xu.c ./PDP11/pdp11_ry.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_rp.c ./PDP11/pdp11_tu.c ./PDP11/pdp11_hk.c ./PDP11/pdp11_vh.c ./PDP11/pdp11_dmc.c ./PDP11/pdp11_dup.c ./PDP11/pdp11_td.c ./PDP11/pdp11_tc.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_ch.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_860 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vax8600 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vax8600 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAX 8600 simulator.
+*** Good Registers in VAX 8600 simulator.
+
+VAX 8600 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EVKAA)
+
+*** PASSED - VAX 8600 Hardware Core Instruction test EVKAA
+
+
+Starting VAX Diagnostic Supervisor
+
+
+Running - VAX Basic Instructions Exerciser EVKAB
+
+
+*** PASSED - VAX Basic Instructions Exerciser EVKAB
+
+
+Running - VAX Floating Point Instructions Exerciser EVKAC
+
+
+*** PASSED - VAX Floating Point Instructions Exerciser EVKAC
+
+
+Running - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** PASSED - VAX Compatibility Mode Instructions Exerciser EVKAD
+
+
+*** All Diagnostic Supervisor tests PASSED ***
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./BESM6/besm6_cpu.c ./BESM6/besm6_sys.c ./BESM6/besm6_mmu.c ./BESM6/besm6_arith.c ./BESM6/besm6_disk.c ./BESM6/besm6_drum.c ./BESM6/besm6_tty.c ./BESM6/besm6_panel.c ./BESM6/besm6_printer.c ./BESM6/besm6_pl.c ./BESM6/besm6_mg.c ./BESM6/besm6_punch.c ./BESM6/besm6_punchcard.c ./BESM6/besm6_vu.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./BESM6 -DUSE_INT64   -o BIN/besm6 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/besm6 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on БЭСМ-6 simulator.
+*** Good Registers in БЭСМ-6 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax410_sysdev.c ./VAX/vax410_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_410 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/microvax2000 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax2000 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX 2000 (KA410) simulator.
+*** Good Registers in MicroVAX 2000 (KA410) simulator.
+
+MicroVAX 2000 (KA410) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the MicroVAX 2000 (KA410) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_411 -o BIN/infoserver100 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/infoserver100 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on InfoServer 100 (KA41-1) simulator.
+*** Good Registers in InfoServer 100 (KA41-1) simulator.
+
+InfoServer 100 (KA41-1) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - InfoServer 100 (KA41-1) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_412 -o BIN/infoserver150vxt -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/infoserver150vxt RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on InfoServer 150 VXT (KA41-2) simulator.
+*** Good Registers in InfoServer 150 VXT (KA41-2) simulator.
+
+InfoServer 150 VXT (KA41-2) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - InfoServer 150 VXT (KA41-2) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_41A -o BIN/microvax3100 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax3100 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX 3100 M10/M20 (KA41-A) simulator.
+*** Good Registers in MicroVAX 3100 M10/M20 (KA41-A) simulator.
+
+MicroVAX 3100 M10/M20 (KA41-A) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - MicroVAX 3100 M10/M20 (KA41-A) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_41D -o BIN/microvax3100e -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax3100e RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX 3100 M10e/M20e (KA41-D) simulator.
+*** Good Registers in MicroVAX 3100 M10e/M20e (KA41-D) simulator.
+
+MicroVAX 3100 M10e/M20e (KA41-D) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - MicroVAX 3100 M10e/M20e (KA41-D) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_42A -o BIN/vaxstation3100m30 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vaxstation3100m30 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAXstation 3100 M30 (KA42-A) simulator.
+*** Good Registers in VAXstation 3100 M30 (KA42-A) simulator.
+
+VAXstation 3100 M30 (KA42-A) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - VAXstation 3100 M30 (KA42-A) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax420_sysdev.c ./VAX/vax420_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rd.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_va.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax_gpx.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_420 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_42B -o BIN/vaxstation3100m38 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vaxstation3100m38 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAXstation 3100 M38 (KA42-B) simulator.
+*** Good Registers in VAXstation 3100 M38 (KA42-B) simulator.
+
+VAXstation 3100 M38 (KA42-B) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - VAXstation 3100 M38 (KA42-B) Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax43_sysdev.c ./VAX/vax43_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax4xx_rz80.c ./VAX/vax_xs.c ./VAX/vax4xx_vc.c ./VAX/vax4xx_ve.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_43 -DUSE_INT64 -DUSE_ADDR64 -DUSE_SIM_VIDEO -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/vaxstation3100m76 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vaxstation3100m76 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAXstation 3100 M76 (KA43-A) simulator.
+*** Good Registers in VAXstation 3100 M76 (KA43-A) simulator.
+
+VAXstation 3100 M76 (KA43-A) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the VAXstation 3100 M76 (KA43-A) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax440_sysdev.c ./VAX/vax440_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax_xs.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax4xx_rz94.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_440 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_46 -o BIN/vaxstation4000m60 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vaxstation4000m60 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAXstation 4000-60 (KA46) simulator.
+*** Good Registers in VAXstation 4000-60 (KA46) simulator.
+
+VAXstation 4000-60 (KA46) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the VAXstation 4000-60 (KA46) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax440_sysdev.c ./VAX/vax440_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax_xs.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax4xx_rz94.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_440 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_47 -o BIN/microvax3100m80 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/microvax3100m80 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on MicroVAX 3100-80 (KA47) simulator.
+*** Good Registers in MicroVAX 3100-80 (KA47) simulator.
+
+MicroVAX 3100-80 (KA47) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the MicroVAX 3100-80 (KA47) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax4xx_stddev.c ./VAX/vax440_sysdev.c ./VAX/vax440_syslist.c ./VAX/vax4xx_dz.c ./VAX/vax_xs.c ./VAX/vax_lk.c ./VAX/vax_vs.c ./VAX/vax4xx_rz94.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DVAX_440 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -DVAX_48 -o BIN/vaxstation4000vlc -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/vaxstation4000vlc RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on VAXstation 4000-VLC (KA48) simulator.
+*** Good Registers in VAXstation 4000-VLC (KA48) simulator.
+
+VAXstation 4000-VLC (KA48) simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+No diagnostics are available for the VAXstation 4000-VLC (KA48) Simulator
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./VAX/vax_cpu.c ./VAX/vax_cpu1.c ./VAX/vax_fpa.c ./VAX/vax_cis.c ./VAX/vax_octa.c ./VAX/vax_cmode.c ./VAX/vax_mmu.c ./VAX/vax_sys.c ./VAX/vax_syscm.c ./VAX/vax_watch.c ./VAX/vax_nar.c ./VAX/vax_xs.c ./VAX/vax4xx_rz94.c ./VAX/vax4nn_stddev.c ./VAX/is1000_sysdev.c ./VAX/is1000_syslist.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_VAX -DIS_1000 -DUSE_INT64 -DUSE_ADDR64 -I ./VAX -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/infoserver1000 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/infoserver1000 RegisterSanityCheck /home/pi/simh/VAX/tests/vax-diag_test.ini </dev/null 
+ Running internal register sanity checks on InfoServer 1000 simulator.
+*** Good Registers in InfoServer 1000 simulator.
+
+InfoServer 1000 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Running Hardware Core Test (EHKAA)
+
+*** PASSED - InfoServer 1000 Hardware Core Instruction test EHKAA
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./ND100/nd100_sys.c ./ND100/nd100_cpu.c ./ND100/nd100_floppy.c ./ND100/nd100_stddev.c ./ND100/nd100_mm.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./ND100 -o BIN/nd100 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/nd100 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on ND100 simulator.
+*** Good Registers in ND100 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./NOVA/nova_sys.c ./NOVA/nova_cpu.c ./NOVA/nova_dkp.c ./NOVA/nova_dsk.c ./NOVA/nova_lp.c ./NOVA/nova_mta.c ./NOVA/nova_plt.c ./NOVA/nova_pt.c ./NOVA/nova_clk.c ./NOVA/nova_tt.c ./NOVA/nova_tt1.c ./NOVA/nova_qty.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./NOVA -o BIN/nova -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/nova RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on NOVA simulator.
+*** Good Registers in NOVA simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./NOVA/eclipse_cpu.c ./NOVA/eclipse_tt.c ./NOVA/nova_sys.c ./NOVA/nova_dkp.c ./NOVA/nova_dsk.c ./NOVA/nova_lp.c ./NOVA/nova_mta.c ./NOVA/nova_plt.c ./NOVA/nova_pt.c ./NOVA/nova_clk.c ./NOVA/nova_tt1.c ./NOVA/nova_qty.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./NOVA -DECLIPSE -DUSE_INT64 -o BIN/eclipse -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/eclipse RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on ECLIPSE simulator.
+*** Good Registers in ECLIPSE simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./HP2100/hp2100_baci.c ./HP2100/hp2100_cpu.c ./HP2100/hp2100_cpu_fp.c ./HP2100/hp2100_cpu_fpp.c ./HP2100/hp2100_cpu0.c ./HP2100/hp2100_cpu1.c ./HP2100/hp2100_cpu2.c ./HP2100/hp2100_cpu3.c ./HP2100/hp2100_cpu4.c ./HP2100/hp2100_cpu5.c ./HP2100/hp2100_cpu6.c ./HP2100/hp2100_cpu7.c ./HP2100/hp2100_di.c ./HP2100/hp2100_di_da.c ./HP2100/hp2100_disclib.c ./HP2100/hp2100_dma.c ./HP2100/hp2100_dp.c ./HP2100/hp2100_dq.c ./HP2100/hp2100_dr.c ./HP2100/hp2100_ds.c ./HP2100/hp2100_ipl.c ./HP2100/hp2100_lps.c ./HP2100/hp2100_lpt.c ./HP2100/hp2100_mc.c ./HP2100/hp2100_mem.c ./HP2100/hp2100_mpx.c ./HP2100/hp2100_ms.c ./HP2100/hp2100_mt.c ./HP2100/hp2100_mux.c ./HP2100/hp2100_pif.c ./HP2100/hp2100_pt.c ./HP2100/hp2100_sys.c ./HP2100/hp2100_tbg.c ./HP2100/hp2100_tty.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DHAVE_INT64 -I ./HP2100 -o BIN/hp2100 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/hp2100 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on HP 2100 simulator.
+*** Good Registers in HP 2100 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./HP3000/hp_disclib.c ./HP3000/hp_tapelib.c ./HP3000/hp3000_atc.c ./HP3000/hp3000_clk.c ./HP3000/hp3000_cpu.c ./HP3000/hp3000_cpu_base.c ./HP3000/hp3000_cpu_fp.c ./HP3000/hp3000_cpu_cis.c ./HP3000/hp3000_ds.c ./HP3000/hp3000_iop.c ./HP3000/hp3000_lp.c ./HP3000/hp3000_mem.c ./HP3000/hp3000_mpx.c ./HP3000/hp3000_ms.c ./HP3000/hp3000_scmb.c ./HP3000/hp3000_sel.c ./HP3000/hp3000_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./HP3000 -o BIN/hp3000 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/hp3000 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on HP 3000 simulator.
+*** Good Registers in HP 3000 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I1401/i1401_lp.c ./I1401/i1401_cpu.c ./I1401/i1401_iq.c ./I1401/i1401_cd.c ./I1401/i1401_mt.c ./I1401/i1401_dp.c ./I1401/i1401_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I1401 -o BIN/i1401 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i1401 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 1401 simulator.
+*** Good Registers in IBM 1401 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I1620/i1620_cd.c ./I1620/i1620_dp.c ./I1620/i1620_pt.c ./I1620/i1620_tty.c ./I1620/i1620_cpu.c ./I1620/i1620_lp.c ./I1620/i1620_fp.c ./I1620/i1620_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I1620 -o BIN/i1620 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i1620 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 1620 simulator.
+*** Good Registers in IBM 1620 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./S3/s3_cd.c ./S3/s3_cpu.c ./S3/s3_disk.c ./S3/s3_lp.c ./S3/s3_pkb.c ./S3/s3_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./S3 -o BIN/s3 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/s3 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on System/3 simulator.
+*** Good Registers in System/3 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./ALTAIR/altair_sio.c ./ALTAIR/altair_cpu.c ./ALTAIR/altair_dsk.c ./ALTAIR/altair_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./ALTAIR -o BIN/altair -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/altair RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Altair 8800 simulator.
+*** Good Registers in Altair 8800 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./AltairZ80/altairz80_cpu.c ./AltairZ80/altairz80_cpu_nommu.c ./AltairZ80/s100_tuart.c ./AltairZ80/s100_dazzler.c ./AltairZ80/s100_jair.c ./AltairZ80/sol20.c ./AltairZ80/s100_vdm1.c ./AltairZ80/mmd.c ./AltairZ80/s100_dj2d.c ./AltairZ80/s100_djhdc.c ./AltairZ80/altairz80_dsk.c ./AltairZ80/disasm.c ./AltairZ80/altairz80_sio.c ./AltairZ80/altairz80_sys.c ./AltairZ80/altairz80_hdsk.c ./AltairZ80/altairz80_net.c ./AltairZ80/s100_hayes.c ./AltairZ80/s100_2sio.c ./AltairZ80/s100_pmmi.c ./AltairZ80/flashwriter2.c ./AltairZ80/i86_decode.c ./AltairZ80/i86_ops.c ./AltairZ80/i86_prim_ops.c ./AltairZ80/i8272.c ./AltairZ80/insnsd.c ./AltairZ80/altairz80_mhdsk.c ./AltairZ80/ibc.c ./AltairZ80/ibc_mcc_hdc.c ./AltairZ80/ibc_smd_hdc.c ./AltairZ80/mfdc.c ./AltairZ80/n8vem.c ./AltairZ80/vfdhd.c ./AltairZ80/s100_disk1a.c ./AltairZ80/s100_disk2.c ./AltairZ80/s100_disk3.c ./AltairZ80/s100_fif.c ./AltairZ80/s100_mdriveh.c ./AltairZ80/s100_icom.c ./AltairZ80/s100_jadedd.c ./AltairZ80/s100_mdsa.c ./AltairZ80/s100_mdsad.c ./AltairZ80/s100_selchan.c ./AltairZ80/s100_ss1.c ./AltairZ80/s100_64fdc.c ./AltairZ80/s100_scp300f.c ./AltairZ80/s100_tarbell.c ./AltairZ80/s100_tdd.c ./AltairZ80/wd179x.c ./AltairZ80/s100_hdc1001.c ./AltairZ80/s100_if3.c ./AltairZ80/s100_adcs6.c ./AltairZ80/m68k/m68kcpu.c ./AltairZ80/m68k/m68kdasm.c ./AltairZ80/m68k/m68kasm.c ./AltairZ80/m68k/m68kopac.c ./AltairZ80/m68k/m68kopdm.c ./AltairZ80/m68k/softfloat/softfloat.c ./AltairZ80/m68k/m68kopnz.c ./AltairZ80/m68k/m68kops.c ./AltairZ80/m68ksim.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./AltairZ80 -DUSE_SIM_VIDEO -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -o BIN/altairz80 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/altairz80 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Altair 8800 (Z80) simulator.
+*** Good Registers in Altair 8800 (Z80) simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./GRI/gri_cpu.c ./GRI/gri_stddev.c ./GRI/gri_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./GRI -o BIN/gri -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/gri RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on GRI-909 simulator.
+*** Good Registers in GRI-909 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7094/i7094_cpu.c ./I7094/i7094_cpu1.c ./I7094/i7094_io.c ./I7094/i7094_cd.c ./I7094/i7094_clk.c ./I7094/i7094_com.c ./I7094/i7094_drm.c ./I7094/i7094_dsk.c ./I7094/i7094_sys.c ./I7094/i7094_lp.c ./I7094/i7094_mt.c ./I7094/i7094_binloader.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DUSE_INT64 -I ./I7094 -o BIN/i7094 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i7094 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 7094 simulator.
+*** Good Registers in IBM 7094 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./Ibm1130/ibm1130_cpu.c ./Ibm1130/ibm1130_cr.c ./Ibm1130/ibm1130_disk.c ./Ibm1130/ibm1130_stddev.c ./Ibm1130/ibm1130_sys.c ./Ibm1130/ibm1130_gdu.c ./Ibm1130/ibm1130_gui.c ./Ibm1130/ibm1130_prt.c ./Ibm1130/ibm1130_fmt.c ./Ibm1130/ibm1130_ptrp.c ./Ibm1130/ibm1130_plot.c ./Ibm1130/ibm1130_sca.c ./Ibm1130/ibm1130_t2741.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./Ibm1130 -o BIN/ibm1130 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/ibm1130 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 1130 simulator.
+*** Good Registers in IBM 1130 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./Interdata/id16_cpu.c ./Interdata/id16_sys.c ./Interdata/id_dp.c ./Interdata/id_fd.c ./Interdata/id_fp.c ./Interdata/id_idc.c ./Interdata/id_io.c ./Interdata/id_lp.c ./Interdata/id_mt.c ./Interdata/id_pas.c ./Interdata/id_pt.c ./Interdata/id_tt.c ./Interdata/id_uvc.c ./Interdata/id16_dboot.c ./Interdata/id_ttp.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DIFP_IN_MEM -I ./Interdata -o BIN/id16 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/id16 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Interdata 16b simulator.
+*** Good Registers in Interdata 16b simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./Interdata/id32_cpu.c ./Interdata/id32_sys.c ./Interdata/id_dp.c ./Interdata/id_fd.c ./Interdata/id_fp.c ./Interdata/id_idc.c ./Interdata/id_io.c ./Interdata/id_lp.c ./Interdata/id_mt.c ./Interdata/id_pas.c ./Interdata/id_pt.c ./Interdata/id_tt.c ./Interdata/id_uvc.c ./Interdata/id32_dboot.c ./Interdata/id_ttp.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./Interdata -o BIN/id32 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/id32 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Interdata 32b simulator.
+*** Good Registers in Interdata 32b simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./SDS/sds_cpu.c ./SDS/sds_drm.c ./SDS/sds_dsk.c ./SDS/sds_io.c ./SDS/sds_lp.c ./SDS/sds_mt.c ./SDS/sds_mux.c ./SDS/sds_rad.c ./SDS/sds_stddev.c ./SDS/sds_sys.c ./SDS/sds_cp.c ./SDS/sds_cr.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./SDS -DUSE_SIM_CARD -o BIN/sds -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/sds RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on SDS 940 simulator.
+*** Good Registers in SDS 940 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./LGP/lgp_cpu.c ./LGP/lgp_stddev.c ./LGP/lgp_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./LGP -o BIN/lgp -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/lgp RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on LGP30 simulator.
+*** Good Registers in LGP30 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./H316/h316_stddev.c ./H316/h316_lp.c ./H316/h316_cpu.c ./H316/h316_sys.c ./H316/h316_mt.c ./H316/h316_fhd.c ./H316/h316_dp.c ./H316/h316_rtc.c ./H316/h316_imp.c ./H316/h316_hi.c ./H316/h316_mi.c ./H316/h316_udp.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./H316 -D VM_IMPTIP -o BIN/h316 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/h316 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on H316 simulator.
+*** Good Registers in H316 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./CDC1700/cdc1700_cpu.c ./CDC1700/cdc1700_dis.c ./CDC1700/cdc1700_io.c ./CDC1700/cdc1700_sys.c ./CDC1700/cdc1700_dev1.c ./CDC1700/cdc1700_mt.c ./CDC1700/cdc1700_dc.c ./CDC1700/cdc1700_iofw.c ./CDC1700/cdc1700_lp.c ./CDC1700/cdc1700_dp.c ./CDC1700/cdc1700_cd.c ./CDC1700/cdc1700_sym.c ./CDC1700/cdc1700_rtc.c ./CDC1700/cdc1700_drm.c ./CDC1700/cdc1700_msos5.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./CDC1700 -o BIN/cdc1700 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/cdc1700 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on CDC1700 simulator.
+*** Good Registers in CDC1700 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./swtp6800/common/mp-a.c ./swtp6800/common/m6800.c ./swtp6800/common/m6810.c ./swtp6800/common/bootrom.c ./swtp6800/common/dc-4.c ./swtp6800/swtp6800/mp-a_sys.c ./swtp6800/common/mp-8m.c ./swtp6800/common/fd400.c ./swtp6800/common/mp-b2.c ./swtp6800/common/mp-s.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./swtp6800/swtp6800 -o BIN/swtp6800mp-a -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/swtp6800mp-a RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on SWTP 6800, V2, MP-A CPU Board simulator.
+*** Good Registers in SWTP 6800, V2, MP-A CPU Board simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./swtp6800/common/mp-a2.c ./swtp6800/common/m6800.c ./swtp6800/common/m6810.c ./swtp6800/common/bootrom.c ./swtp6800/common/dc-4.c ./swtp6800/swtp6800/mp-a2_sys.c ./swtp6800/common/mp-8m.c ./swtp6800/common/i2716.c ./swtp6800/common/fd400.c ./swtp6800/common/mp-s.c ./swtp6800/common/mp-b2.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./swtp6800/swtp6800 -o BIN/swtp6800mp-a2 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/swtp6800mp-a2 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on SWTP 6800, V2, MP-A2 CPU Board simulator.
+*** Good Registers in SWTP 6800, V2, MP-A2 CPU Board simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./TX-0/tx0_cpu.c ./TX-0/tx0_dpy.c ./TX-0/tx0_stddev.c ./TX-0/tx0_sys.c ./TX-0/tx0_sys_orig.c ./display/display.c ./display/sim_ws.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./TX-0 -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -o BIN/tx-0 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/tx-0 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on TX-0 simulator.
+*** Good Registers in TX-0 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./SSEM/ssem_cpu.c ./SSEM/ssem_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./SSEM -o BIN/ssem -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/ssem RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on SSEM simulator.
+*** Good Registers in SSEM simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./B5500/b5500_cpu.c ./B5500/b5500_io.c ./B5500/b5500_sys.c ./B5500/b5500_dk.c ./B5500/b5500_mt.c ./B5500/b5500_urec.c ./B5500/b5500_dr.c ./B5500/b5500_dtc.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I./B5500 -DUSE_INT64 -DB5500 -DUSE_SIM_CARD -o BIN/b5500 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/b5500 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on B5500 simulator.
+*** Good Registers in B5500 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./Intel-Systems/common/i8080.c ./Intel-Systems/Intel-MDS/imds_sys.c ./Intel-Systems/common/i3214.c ./Intel-Systems/common/i8251.c ./Intel-Systems/common/i8253.c ./Intel-Systems/common/i8255.c ./Intel-Systems/common/i8259.c ./Intel-Systems/common/ieprom.c ./Intel-Systems/common/ioc-cont.c ./Intel-Systems/common/ipc-cont.c ./Intel-Systems/common/iram8.c ./Intel-Systems/common/isbc064.c ./Intel-Systems/common/isbc202.c ./Intel-Systems/common/isbc201.c ./Intel-Systems/common/isbc206.c ./Intel-Systems/common/isbc464.c ./Intel-Systems/common/isbc208.c ./Intel-Systems/common/port.c ./Intel-Systems/common/irq.c ./Intel-Systems/common/multibus.c ./Intel-Systems/common/mem.c ./Intel-Systems/common/sys.c ./Intel-Systems/common/zx200a.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./Intel-Systems/Intel-MDS -o BIN/intel-mds -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/intel-mds RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Intel-MDS simulator.
+*** Good Registers in Intel-MDS simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./Intel-Systems/common/i8008.c ./Intel-Systems/scelbi/scelbi_sys.c ./Intel-Systems/scelbi/scelbi_io.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./Intel-Systems/scelbi -o BIN/scelbi -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/scelbi RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on SCELBI simulator.
+*** Good Registers in SCELBI simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./3B2/3b2_cpu.c ./3B2/3b2_sys.c ./3B2/3b2_rev2_sys.c ./3B2/3b2_rev2_mmu.c ./3B2/3b2_mau.c ./3B2/3b2_rev2_csr.c ./3B2/3b2_timer.c ./3B2/3b2_stddev.c ./3B2/3b2_mem.c ./3B2/3b2_iu.c ./3B2/3b2_if.c ./3B2/3b2_id.c ./3B2/3b2_dmac.c ./3B2/3b2_io.c ./3B2/3b2_ports.c ./3B2/3b2_ctc.c ./3B2/3b2_scsi.c ./3B2/3b2_ni.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DUSE_INT64 -DUSE_ADDR64 -DREV2 -I ./3B2 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/3b2 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+cp BIN/3b2 BIN/3b2-400
+BIN/3b2 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on AT&T 3B2/400 simulator.
+*** Good Registers in AT&T 3B2/400 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./3B2/3b2_cpu.c ./3B2/3b2_sys.c ./3B2/3b2_rev3_sys.c ./3B2/3b2_rev3_mmu.c ./3B2/3b2_mau.c ./3B2/3b2_rev3_csr.c ./3B2/3b2_timer.c ./3B2/3b2_stddev.c ./3B2/3b2_mem.c ./3B2/3b2_iu.c ./3B2/3b2_if.c ./3B2/3b2_dmac.c ./3B2/3b2_io.c ./3B2/3b2_ports.c ./3B2/3b2_scsi.c ./3B2/3b2_ni.c ./sim_scsi.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DUSE_INT64 -DUSE_ADDR64 -DREV3 -I ./3B2 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/3b2-700 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/3b2-700 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on AT&T 3B2/700 simulator.
+*** Good Registers in AT&T 3B2/700 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i701_cpu.c ./I7000/i701_sys.c ./I7000/i701_chan.c ./I7000/i7090_cdr.c ./I7000/i7090_cdp.c ./I7000/i7090_lpr.c ./I7000/i7000_mt.c ./I7000/i7090_drum.c ./I7000/i7000_chan.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DUSE_INT64 -DI701 -DUSE_SIM_CARD -o BIN/i701 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i701 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 701 simulator.
+*** Good Registers in IBM 701 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i7090_cpu.c ./I7000/i7090_sys.c ./I7000/i7090_chan.c ./I7000/i7090_cdr.c ./I7000/i7090_cdp.c ./I7000/i7090_lpr.c ./I7000/i7000_mt.c ./I7000/i7090_drum.c ./I7000/i7000_chan.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DUSE_INT64 -DI704 -DUSE_SIM_CARD -o BIN/i704 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i704 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 704 simulator.
+*** Good Registers in IBM 704 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i7010_cpu.c ./I7000/i7010_sys.c ./I7000/i7010_chan.c ./I7000/i7000_cdp.c ./I7000/i7000_cdr.c ./I7000/i7000_con.c ./I7000/i7000_chan.c ./I7000/i7000_lpr.c ./I7000/i7000_mt.c ./I7000/i7000_chron.c ./I7000/i7000_dsk.c ./I7000/i7000_com.c ./I7000/i7000_ht.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DI7010 -DUSE_SIM_CARD -o BIN/i7010 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i7010 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 7010 simulator.
+*** Good Registers in IBM 7010 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i7070_cpu.c ./I7000/i7070_sys.c ./I7000/i7070_chan.c ./I7000/i7000_cdp.c ./I7000/i7000_cdr.c ./I7000/i7000_con.c ./I7000/i7000_chan.c ./I7000/i7000_lpr.c ./I7000/i7000_mt.c ./I7000/i7000_chron.c ./I7000/i7000_dsk.c ./I7000/i7000_com.c ./I7000/i7000_ht.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DUSE_INT64 -DI7070 -DUSE_SIM_CARD -o BIN/i7070 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i7070 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 7070 simulator.
+*** Good Registers in IBM 7070 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i7080_cpu.c ./I7000/i7080_sys.c ./I7000/i7080_chan.c ./I7000/i7080_drum.c ./I7000/i7000_cdp.c ./I7000/i7000_cdr.c ./I7000/i7000_con.c ./I7000/i7000_chan.c ./I7000/i7000_lpr.c ./I7000/i7000_mt.c ./I7000/i7000_chron.c ./I7000/i7000_dsk.c ./I7000/i7000_com.c ./I7000/i7000_ht.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DI7080 -DUSE_SIM_CARD -o BIN/i7080 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i7080 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 7080 simulator.
+*** Good Registers in IBM 7080 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I7000/i7090_cpu.c ./I7000/i7090_sys.c ./I7000/i7090_chan.c ./I7000/i7090_cdr.c ./I7000/i7090_cdp.c ./I7000/i7090_lpr.c ./I7000/i7000_chan.c ./I7000/i7000_mt.c ./I7000/i7090_drum.c ./I7000/i7090_hdrum.c ./I7000/i7000_chron.c ./I7000/i7000_dsk.c ./I7000/i7000_com.c ./I7000/i7000_ht.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I7000 -DUSE_INT64 -DI7090 -DUSE_SIM_CARD -o BIN/i7090 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i7090 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on IBM 7090 simulator.
+*** Good Registers in IBM 7090 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./sigma/sigma_cpu.c ./sigma/sigma_sys.c ./sigma/sigma_cis.c ./sigma/sigma_coc.c ./sigma/sigma_dk.c ./sigma/sigma_dp.c ./sigma/sigma_fp.c ./sigma/sigma_io.c ./sigma/sigma_lp.c ./sigma/sigma_map.c ./sigma/sigma_mt.c ./sigma/sigma_pt.c ./sigma/sigma_rad.c ./sigma/sigma_rtc.c ./sigma/sigma_tt.c ./sigma/sigma_cr.c ./sigma/sigma_cp.c  ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./sigma -o BIN/sigma -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/sigma RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on XDS Sigma simulator.
+*** Good Registers in XDS Sigma simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP11/pdp11_cis.c ./PDP11/pdp11_cpu.c ./PDP11/pdp11_cpumod.c ./PDP11/pdp11_cr.c ./PDP11/pdp11_fp.c ./PDP11/pdp11_io.c ./PDP11/pdp11_io_lib.c ./PDP11/pdp11_lp.c ./PDP11/pdp11_rh.c ./PDP11/pdp11_rk.c ./PDP11/pdp11_stddev.c ./PDP11/pdp11_sys.c ./PDP11/pdp11_uc15.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DVM_PDP11 -DUC15 -I ./PDP11 -I ./PDP18B -o BIN/uc15 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/uc15 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on UC-15 simulator.
+*** Good Registers in UC-15 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/kx10_cpu.c ./PDP10/kx10_sys.c ./PDP10/kx10_df.c ./PDP10/kx10_dp.c ./PDP10/kx10_mt.c ./PDP10/kx10_cty.c ./PDP10/kx10_lp.c ./PDP10/kx10_pt.c ./PDP10/kx10_dc.c ./PDP10/kx10_rp.c ./PDP10/kx10_rc.c ./PDP10/kx10_dt.c ./PDP10/kx10_dk.c ./PDP10/kx10_cr.c ./PDP10/kx10_cp.c ./PDP10/kx10_tu.c ./PDP10/kx10_rs.c ./PDP10/ka10_pd.c ./PDP10/kx10_rh.c ./PDP10/kx10_imp.c ./PDP10/ka10_tk10.c ./PDP10/ka10_mty.c ./PDP10/ka10_imx.c ./PDP10/ka10_ch10.c ./PDP10/ka10_stk.c ./PDP10/ka10_ten11.c ./PDP10/ka10_auxcpu.c ./PDP10/ka10_pmp.c ./PDP10/ka10_dkb.c ./PDP10/pdp6_dct.c ./PDP10/pdp6_dtc.c ./PDP10/pdp6_mtc.c ./PDP10/pdp6_dsk.c ./PDP10/pdp6_dcs.c ./PDP10/ka10_dpk.c ./PDP10/kx10_dpy.c ./PDP10/ka10_ai.c ./PDP10/ka10_iii.c ./PDP10/kx10_disk.c ./PDP10/ka10_pclk.c ./PDP10/ka10_tv.c ./PDP10/ka10_dd.c ./PDP10/kx10_ddc.c ./display/display.c ./display/sim_ws.c ./display/type340.c ./display/iii.c  ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DKA=1 -DUSE_INT64 -I ./PDP10 -DUSE_SIM_CARD -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs`  -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp10-ka -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz   
+BIN/pdp10-ka RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on KA-10 simulator.
+*** Good Registers in KA-10 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/kx10_cpu.c ./PDP10/kx10_sys.c ./PDP10/kx10_df.c ./PDP10/kx10_dp.c ./PDP10/kx10_mt.c ./PDP10/kx10_cty.c ./PDP10/kx10_lp.c ./PDP10/kx10_pt.c ./PDP10/kx10_dc.c ./PDP10/kx10_rh.c ./PDP10/kx10_rp.c ./PDP10/kx10_rc.c ./PDP10/kx10_dt.c ./PDP10/kx10_dk.c ./PDP10/kx10_cr.c ./PDP10/kx10_cp.c ./PDP10/kx10_tu.c ./PDP10/kx10_rs.c ./PDP10/kx10_imp.c ./PDP10/kx10_dpy.c ./PDP10/kx10_disk.c ./PDP10/kx10_ddc.c ./PDP10/kx10_tym.c ./display/display.c ./display/sim_ws.c ./display/type340.c  ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DKI=1 -DUSE_INT64 -I ./PDP10 -DUSE_SIM_CARD -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs`  -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp10-ki -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz   
+BIN/pdp10-ki RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on KI-10 simulator.
+*** Good Registers in KI-10 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/kx10_cpu.c ./PDP10/kx10_sys.c ./PDP10/kx10_df.c ./PDP10/kx10_dp.c ./PDP10/kx10_mt.c ./PDP10/kx10_lp.c ./PDP10/kx10_pt.c ./PDP10/kx10_dc.c ./PDP10/kx10_rh.c ./PDP10/kx10_dt.c ./PDP10/kx10_cr.c ./PDP10/kx10_cp.c ./PDP10/kx10_rp.c ./PDP10/kx10_tu.c ./PDP10/kx10_rs.c ./PDP10/kx10_imp.c ./PDP10/kl10_fe.c ./PDP10/ka10_pd.c ./PDP10/ka10_ch10.c ./PDP10/kl10_nia.c ./PDP10/kx10_disk.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DKL=1 -DUSE_INT64 -I ./PDP10 -DUSE_SIM_CARD -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c  -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp10-kl -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp10-kl RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on KL-10 simulator.
+*** Good Registers in KL-10 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/kx10_cpu.c ./PDP10/kx10_sys.c ./PDP10/kx10_disk.c ./PDP10/ks10_cty.c ./PDP10/ks10_uba.c ./PDP10/kx10_rh.c ./PDP10/kx10_rp.c ./PDP10/kx10_tu.c ./PDP10/ks10_dz.c ./PDP10/ks10_tcu.c ./PDP10/ks10_lp.c ./PDP10/ks10_ch11.c ./PDP10/ks10_kmc.c ./PDP10/ks10_dup.c ./PDP10/kx10_imp.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DKS=1 -DUSE_INT64 -I ./PDP10 -I ./PDP11 -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp10-ks -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/pdp10-ks RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on KS-10 simulator.
+*** Good Registers in KS-10 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./PDP10/kx10_cpu.c ./PDP10/kx10_sys.c ./PDP10/kx10_cty.c ./PDP10/kx10_lp.c ./PDP10/kx10_pt.c ./PDP10/kx10_cr.c ./PDP10/kx10_cp.c ./PDP10/pdp6_dct.c ./PDP10/pdp6_dtc.c ./PDP10/pdp6_mtc.c ./PDP10/pdp6_dsk.c ./PDP10/pdp6_dcs.c ./PDP10/kx10_dpy.c ./PDP10/pdp6_slave.c ./PDP10/pdp6_ge.c ./display/display.c ./display/sim_ws.c ./display/type340.c  ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -DPDP6=1 -DUSE_INT64 -I ./PDP10 -DUSE_SIM_CARD -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs`  -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/pdp6 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz   
+BIN/pdp6 RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on PDP6 simulator.
+*** Good Registers in PDP6 simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./I650/i650_cpu.c ./I650/i650_cdr.c ./I650/i650_cdp.c ./I650/i650_dsk.c ./I650/i650_mt.c ./I650/i650_sys.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./I650 -DUSE_INT64 -DUSE_SIM_CARD -o BIN/i650 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/i650 RegisterSanityCheck /home/pi/simh/I650/tests/i650_test.ini </dev/null 
+ Running internal register sanity checks on IBM 650 simulator.
+*** Good Registers in IBM 650 simulator.
+
+IBM 650 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+Logging to file "console.txt"
+
+
+** IBM 650: Basic Instruction Test: 
+00 0000 0001  50 1000 0000  50 1000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0002  50 2000 0000  50 1414 2135  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0003  50 3000 0000  50 1732 0508  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0004  50 4000 0000  50 2000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0005  50 5000 0000  50 2236 0679  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0006  50 6000 0000  50 2449 4897  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0007  50 7000 0000  50 2645 7513  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0008  50 8000 0000  50 2828 4271  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+00 0000 0009  50 9000 0000  50 3000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  00 0000 0000  
+
+Address Error, IC: 09999
+FDS Ok
+** Test: passed.
+
+
+** IBM 650: Floating Point Instruction Test: 
+
+C     RECTANGULAR  MATRIX
+C       MULTIPLICATION
+      DIMENSION A(4,5), B(5,3)
+      READ 1,A,B
+      READ 1,N,M,L
+    7 DO 4 J=1,N
+    1 DO 4 I=1,M
+    6 SUM=0.0
+    2 DO 3 K=1,L
+    3 SUM = SUM+A(I,K) * B(K,J)
+    4 PUNCH 1, SUM, I,J
+    8 END
+***
+*** Load FORTRANSIT translator deck into drum
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD    1951  9999 )
+
+I/O Error, IC: 08000 ( 7019519999+   RD    1951  9999 )
+***
+*** Run FORTRANSIT translator
+***
+                                          T200001T15 0021             DF    0000
+                                          T36T3 7T38                  DF    0000
+   7+                                        4KI39      K   1     K         0007
+   7+                                              1    KI36      K    F    0007
+   1+                                        4KI40      K   1     K         0001
+   1+                                              1    KI37      K    F    0001
+   6+                                     Y41Z0   J0                   F    0006
+   2+                                        3KI42      K   1     K         0002
+   2+                                              1    KI38      K    F    0002
+   3+                                     Y41ZY41SYLLM4RSL4XI42RSI40RXYL    0003
+   3+                                     15SL5XI39RSI42R              F    0003
+   4+                                     T41T4 0T39                   F    0004
+   8+                                                                 FF    0008
+         +         +         +        4B0000000000         +         +         +
+
+I/O Error, IC: 01999 ( 7019520228+   RD    1952  0228 )
+***
+*** Load IT compiler deck into drum
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD    1951  9999 )
+***
+*** Run IT compiler
+***
+     1               REG   Y0002    0043                
+     2      ES000     00    0000   LAAAA                
+     3      LAAAA    RAL   EZ001              T200001T15
+     4               STL   W0002               0021     
+     5               RAL   EZ002                      DF
+     6               STL   W0003                        
+     7               RAL   EZ003                        
+     8               LDD   LABAA   E00AQ                
+     9      ES000     00    0000   LABAA                
+    10      LABAA    RAL   EZ004              T36T3 7T38
+    11               STL   W0002                        
+    12               RAL   EZ005                      DF
+    13               STL   W0003                        
+    14               RAL   EZ006                        
+    15               STL   W0004                        
+    16               RAL   EZ007                        
+    17               LDD   LACAA   E00AQ                
+    18      ES007     00    0000   LACAA                
+    19      LACAA    RAA   Y0000                 4KI39  
+    20               LDD    8005                  K   1 
+    21               STD   Y0039   LADAA          K     
+    22      ET021     00    0000   LADAA                
+    23      ES001     00    0000   LADAA                
+    24      LADAA    RAB   Y0000                 4KI40  
+    25               LDD    8006                  K   1 
+    26               STD   Y0040   LAEAA          K     
+    27      ET026     00    0000   LAEAA                
+    28      ES006     00    0000   LAEAA                
+    29      LAEAA    RAU   EZ008              Y41Z0   J0
+    30               STU   Y0041   LAFAA                
+    31      ES002     00    0000   LAFAA                
+    32      LAFAA    RAC   Y0000                 3KI42  
+    33               LDD    8007                  K   1 
+    34               STD   Y0042   LAGAA          K     
+    35      ET034     00    0000   LAGAA                
+    36      ES003     00    0000   LAGAA                
+    37      LAGAA    RAU    8005              Y41ZY41SYL
+    38               MPY   EZ009              LM4RSL4XI4
+    39               SLT   Y0003              2RSI40RXYL
+    40               ALO            8002      15SL5XI39R
+    41               RAU    6016              SI42R     
+    42               STU   W0000                       F
+    43               RAL    8006                        
+    44               STL   W0001                        
+    45               RAU    8007                        
+    46               MPY   EZ010                        
+    47               ALO   W0001                        
+    48               STL   W0001                        
+    49               RSL   EZ010                        
+    50               ALO   W0001                        
+    51               SLT   Y0003                        
+    52               ALO            8002                
+    53               RAU   Y0000                        
+    54               FMP   W0000                        
+    55               FAD   Y0041                        
+    56               LDD           E00AA                
+    57               STU   Y0041   LAHAA                
+    58      ES000     00    0000   LAHAA                
+    59      LAHAA    AXC   Y0000                        
+    60               RSL    8007                        
+    61               STD   Y0042                        
+    62               ALO   Y0038                        
+    63               BMI   LAIAA   ET034                
+    64      ES004     00    0000   LAIAA                
+    65      LAIAA    RAL   EZ011              T41T4 0T39
+    66               STL   W0002                        
+    67               RAL   EZ012                       F
+    68               STL   W0003                        
+    69               RAL   EZ013                        
+    70               STL   W0004                        
+    71               RAL   EZ014                        
+    72               LDD   LAJAA   E00AR                
+    73      ES000     00    0000   LAJAA                
+    74      LAJAA    AXB   Y0000                        
+    75               RSL    8006                        
+    76               STD   Y0040                        
+    77               ALO   Y0037                        
+    78               BMI   LAKAA   ET026                
+    79      ES000     00    0000   LAKAA                
+    80      LAKAA    AXA   Y0000                        
+    81               RSL    8005                        
+    82               STD   Y0039                        
+    83               ALO   Y0036                        
+    84               BMI   LALAA   ET021                
+    85      ES008     00    0000   LALAA                
+    86      LALAA    NOP    8000    8000                
+    87      EZ014     00    0003    0004                
+    88      EZ013     00    0000    0041                
+    89      EZ012     00    0000    0040                
+    90      EZ011     00    0000    0039                
+    91      EZ010     00    0000    0004                
+    92      EZ009     00    0000    0005                
+    93      EZ008     00    0000    0000                
+    94      EZ007     00    0003    0000                
+    95      EZ006     00    0000    0036                
+    96      EZ005     00    0000    0037                
+    97      EZ004     00    0000    0038                
+    98      EZ003     00    0002    0000                
+    99      EZ002     00    0020    0001                
+   100      EZ001     00    0015    0021                
+   101               BOP                                
+
+I/O Error, IC: 00360 ( 7019989999+   RD    1998  9999 )
+***
+*** Load SOAP deck into drum
+***
+
+Programmed Stop, IC: 01951 ( 0100001000+   STOP  0000  1000 )
+***
+*** Run SOAP assembler
+***
+1                                            
+1              FORTRAN PACKAGE MISSING       
+1              FROM ORIGINAL LISTING         
+1              REWRITTEN BY ROBERTO SANCHO   
+1              IN MAY 2018                   
+1                                            
+1              FORTRAN PACKAGE               
+1              ENTRY POINTS                  
+1                                            
+          SYN   LAAAA    1999      INITIAL LO
+          SYN   ACC      0000      RESERVE AC
+1                                            
+1              BUILT-IN SUBROUTINES (180 WORD
+1                                            
+          SYN   E00AA    1961      CHECK OVER
+          SYN   E00TH    1962      FLOAT (U) 
+          SYN   E00AE    1963      FIX (L) TO
+          SYN   E00AF    1964      FIX (L) TO
+          SYN   E00AQ    1965      READ ENTRY
+          SYN   E00AR    1966      PUNCH ENTR
+          SYN   EZZZA    1967      SAVE INDEX
+          SYN   EZZZB    1968      RESTORE IN
+1                                            
+1              POWER SUBROUTINES             
+1                                            
+          SYN   E00AK    1949      FIX (L) **
+          SYN   E00AL    1948      FLOAT (U) 
+          SYN   E00LQ    1947      FLOAT (U) 
+1                                            
+1              FUNCTION SUBROUTINES          
+1                                            
+          SYN   E00AB    1969      LOGF  (1) 
+          SYN   E00AC    1970      EXPF  (2) 
+          SYN   E00LO    1971      LNF   (300
+          SYN   E00LP    1972      EXPNF (301
+          SYN   E00AV    1973      COSF  (21)
+          SYN   E00AW    1974      SINF  (22)
+          SYN   E00AX    1975      SQRTF (23)
+          SYN   E00AY    1976      ABSF  (24)
+          SYN   E00AZ    1945      INTF  (25)
+          SYN   E00BA    1946      MAXF  (26)
+1                                            
+1              END OF FORTRAN PACKAGE ENTRY P
+1                                            
+          REG   Y0002    0043                
+1                                            
+1              FORTRAN                       
+1              PACKAGE RESERVATION           
+1              FOR PACKAGE USE               
+1                                            
+1              INCLUDES                      
+1              - FLOAT FIX CONVERSIONS       
+1              - FORTRAN READ PUNCH STATEMENS
+1              - FORTRAN POWER OPERATOR      
+1              - FORTRAN FUNCTIONS           
+1              EXCLUDES                      
+1              - NOTHING                     
+1                                            
+          REG   P1951    1960      READ BAND 
+          REG   J1977    1986      PUNCH BAND
+          REG   W1988    1998      STORAGE BA
+          BLR    1401    1999      RESERVE   
+1                                  PACK SPACE
+1                                            
+1              END OF PACKAGE RESERVATION    
+1                                            
+ ES000     00    0000   LAAAA                    0050    00  0000  1999 
+ LAAAA    RAL   EZ001              T200001T15    1999    65  0052  0057 
+          STL   W0002               0021         0057    20  1989  0092 
+          RAL   EZ002                      DF    0092    65  0045  0049 
+          STL   W0003                            0049    20  1990  0093 
+          RAL   EZ003                            0093    65  0046  0001 
+          LDD   LABAA   E00AQ                    0001    69  0054  1965 
+ ES000     00    0000   LABAA                    0050    00  0000  0054 
+ LABAA    RAL   EZ004              T36T3 7T38    0054    65  0107  0061 
+          STL   W0002                            0061    20  1989  0142 
+          RAL   EZ005                      DF    0142    65  0095  0099 
+          STL   W0003                            0099    20  1990  0143 
+          RAL   EZ006                            0143    65  0096  0051 
+          STL   W0004                            0051    20  1991  0044 
+          RAL   EZ007                            0044    65  0047  0101 
+          LDD   LACAA   E00AQ                    0101    69  0104  1965 
+ ES007     00    0000   LACAA                    0100    00  0000  0104 
+ LACAA    RAA   Y0000                 4KI39      0104    80  0001  0060 
+          LDD    8005                  K   1     0060    69  8005  0066 
+          STD   Y0039   LADAA          K         0066    24  0040  0193 
+ ET021     00    0000   LADAA                    0150    00  0000  0193 
+ ES001     00    0000   LADAA                    0200    00  0000  0193 
+ LADAA    RAB   Y0000                 4KI40      0193    82  0001  0149 
+          LDD    8006                  K   1     0149    69  8006  0055 
+          STD   Y0040   LAEAA          K         0055    24  0041  0094 
+ ET026     00    0000   LAEAA                    0250    00  0000  0094 
+ ES006     00    0000   LAEAA                    0300    00  0000  0094 
+ LAEAA    RAU   EZ008              Y41Z0   J0    0094    60  0097  0151 
+          STU   Y0041   LAFAA                    0151    21  0042  0145 
+ ES002     00    0000   LAFAA                    0350    00  0000  0145 
+ LAFAA    RAC   Y0000                 3KI42      0145    88  0001  0201 
+          LDD    8007                  K   1     0201    69  8007  0157 
+          STD   Y0042   LAGAA          K         0157    24  0043  0146 
+ ET034     00    0000   LAGAA                    0400    00  0000  0146 
+ ES003     00    0000   LAGAA                    0450    00  0000  0146 
+ LAGAA    RAU    8005              Y41ZY41SYL    0146    60  8005  0053 
+          MPY   EZ009              LM4RSL4XI4    0053    19  0056  0077 
+          SLT   Y0003              2RSI40RXYL    0077    35  0004  0087 
+          ALO            8002      15SL5XI39R    0087    15  0090  8002 
+          RAU    6016              SI42R         0090    60  6016  0071 
+          STU   W0000                       F    0071    21  1987  0140 
+          RAL    8006                            0140    65  8006  0147 
+          STL   W0001                            0147    20  1988  0091 
+          RAU    8007                            0091    60  8007  0199 
+          MPY   EZ010                            0199    19  0102  0073 
+          ALO   W0001                            0073    15  1988  0243 
+          STL   W0001                            0243    20  1988  0141 
+          RSL   EZ010                            0141    66  0102  0207 
+          ALO   W0001                            0207    15  1988  0293 
+          SLT   Y0003                            0293    35  0004  0103 
+          ALO            8002                    0103    15  0106  8002 
+          RAU   Y0000                            0106    60  0001  0105 
+          FMP   W0000                            0105    39  1987  0137 
+          FAD   Y0041                            0137    32  0042  0069 
+          LDD           E00AA                    0069    69  0072  1961 
+          STU   Y0041   LAHAA                    0072    21  0042  0195 
+ ES000     00    0000   LAHAA                    0050    00  0000  0195 
+ LAHAA    AXC   Y0000                            0195    58  0001  0251 
+          RSL    8007                            0251    66  8007  0059 
+          STD   Y0042                            0059    24  0043  0196 
+          ALO   Y0038                            0196    15  0039  0343 
+          BMI   LAIAA   ET034                    0343    46  0246  0400 
+ ES004     00    0000   LAIAA                    0500    00  0000  0246 
+ LAIAA    RAL   EZ011              T41T4 0T39    0246    65  0249  0153 
+          STL   W0002                            0153    20  1989  0192 
+          RAL   EZ012                       F    0192    65  0245  0299 
+          STL   W0003                            0299    20  1990  0393 
+          RAL   EZ013                            0393    65  0296  0301 
+          STL   W0004                            0301    20  1991  0144 
+          RAL   EZ014                            0144    65  0197  0351 
+          LDD   LAJAA   E00AR                    0351    69  0154  1966 
+ ES000     00    0000   LAJAA                    0050    00  0000  0154 
+ LAJAA    AXB   Y0000                            0154    52  0001  0110 
+          RSL    8006                            0110    66  8006  0067 
+          STD   Y0040                            0067    24  0041  0194 
+          ALO   Y0037                            0194    15  0038  0443 
+          BMI   LAKAA   ET026                    0443    46  0346  0250 
+ ES000     00    0000   LAKAA                    0050    00  0000  0346 
+ LAKAA    AXA   Y0000                            0346    50  0001  0152 
+          RSL    8005                            0152    66  8005  0109 
+          STD   Y0039                            0109    24  0040  0493 
+          ALO   Y0036                            0493    15  0037  0191 
+          BMI   LALAA   ET021                    0191    46  0244  0150 
+ ES008     00    0000   LALAA                    0550    00  0000  0244 
+ LALAA    NOP    8000    8000                    0244    00  8000  8000 
+ EZ014     00    0003    0004                    0197    00  0003  0004 
+ EZ013     00    0000    0041                    0296    00  0000  0041 
+ EZ012     00    0000    0040                    0245    00  0000  0040 
+ EZ011     00    0000    0039                    0249    00  0000  0039 
+ EZ010     00    0000    0004                    0102    00  0000  0004 
+ EZ009     00    0000    0005                    0056    00  0000  0005 
+ EZ008     00    0000    0000                    0097    00  0000  0000 
+ EZ007     00    0003    0000                    0047    00  0003  0000 
+ EZ006     00    0000    0036                    0096    00  0000  0036 
+ EZ005     00    0000    0037                    0095    00  0000  0037 
+ EZ004     00    0000    0038                    0107    00  0000  0038 
+ EZ003     00    0002    0000                    0046    00  0002  0000 
+ EZ002     00    0020    0001                    0045    00  0020  0001 
+ EZ001     00    0015    0021                    0052    00  0015  0021 
+          BOP                                
+
+I/O Error, IC: 08003 ( 7019991998+   RD    1999  1998 )
+***
+*** Read Object Program Deck
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD    1951  9999 )
+***
+*** Run Program
+***
+4800000052           1           1                                                       10004  
+1100000053-          2           1                                                       20004  
+3030000053           3           1                                                       30004  
+1660000053-          4           1                                                       40004  
+1000000053-          1           2                                                       50004  
+6900000052           2           2                                                       60004  
+2620000053-          3           2                                                       70004  
+1920000053           4           2                                                       80004  
+1390000053           1           3                                                       90004  
+8000000051           2           3                                                      100004  
+3240000053           3           3                                                      110004  
+1690000053           4           3                                                      120004  
+
+Programmed Stop, IC: 08000 ( 0100009999-   STOP  0000  9999 )
+FORTRANSIT Ok
+** Test: passed.
+
+
+** IBM 650: Index, IAS and RAMAC: 
+/home/pi/simh/I650/sw/run_supersoap_ramac.ini-29> at mt2 soaplib.tap
+%SIM-INFO: MT2: Tape Image 'soaplib.tap' scanned as SIMH format
+***
+*** Load SuperSoap from RAMAC and assemble source deck
+***
+0001   1    EXAMPLE CALCULATE F OF X      
+0002                                                  
+0003               BLR   1951   1960    READ AREA     
+0004        P0001  BLR   27    P0002    PUNCH AREA    
+0005        START  RAU  ONE    1F       SET X              0004  +60 0007 0011
+0006        1      STU  P0001           TO 1               0011  +21 0027 0030
+0007               MPY  A               CALCULATE          0030  +19 0033 0003
+0008               ALO  B               F                  0003  +15 0006 0061
+0009               RAU   8002                              0061  +60 8002 0019
+0010               MPY  P0001                              0019  +19 0027 0047
+0011               ALO  C                                  0047  +15 0000 0005
+0012               STL  P0002                              0005  +20 0028 0031
+0013               WR1  P0001           PUNCH              0031  +71 0027 0037
+0014               RAU  P0001                              0037  +60 0027 0081
+0015               SUP  XMAX            IS X MAX           0081  +11 0034 0039
+0016               NZU          9876                       0039  +44 0043 9876
+0017               AUP  101    1B       INCREASE X         0043  +10 0046 0011
+0018                                                  
+0019        ONE     00   0000   0001    CONSTANTS          0007  +00 0000 0001
+0020        XMAX    00   0000   0100                       0034  +00 0000 0100
+0021        101     00   0000   0101                       0046  +00 0000 0101
+0022               END                                
+
+Address Error, IC: 09898
+SuperSoap Ok
+** Test: passed.
+
+
+** IBM 650: 4k Drum and Tape: 
+/home/pi/simh/I650/sw/run_soap4.ini-24> at mt2 soaplib.tap
+%SIM-INFO: MT2: Tape Image 'soaplib.tap' scanned as SIMH format
+***
+*** Load SOAP4 deck into drum
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD1   1951  9999 )
+***
+*** Assemble source deck
+***
+1                           SOAP 4000        
+1                                            
+1                 SYMBOLIC OPTIMAL ASSEMBLY P
+1                                            
+1                           FOR   THE        
+1                                            
+1                         IBM 650 MODEL 4    
+1                                            
+1                     DATA PROCESSING SYSTEM 
+1                                            
+1                           LIBRARIAN        
+1                                            
+1                   WRITTEN BY ROBERTO SANCHO
+1                            MARCH 2020      
+1                                            
+          BLR    1000    1000      ENTRY     
+          REG   H1100    1109      TAP HEADER
+          SYN   ZERO    H0001                
+          SYN   READC    1950                
+          BLR    1951    1967       17WD BUFF
+          REG   P1977    1986      PUNCH AREA
+          BLR    1998    1999                
+1                                            
+1                   CHECK LIBRARY TAPE       
+1                   FIRST RECORD             
+1                                            
+  1000    RWD    8012              READ TAPE     1000    55  8012  0005 
+          SET    9050               FIRST        0005    27  9050  0010 
+          RTN    8012               RECORD       0010    04  8012  0015 
+          NTS           INITP      JMP IF ERR    0015    25  0019  0020 
+          RAU    9050              CHECK         0019    60  9050  0027 
+          AUP    9051               HEADER       0027    10  9051  0035 
+          SUP   H0002               RECORD       0035    11  1101  0055 
+          AUP    9052              IF RECORD     0055    10  9052  0013 
+          SUP   H0003               NOT MATCH    0013    11  1102  0007 
+          AUP    9053               THEN         0007    10  9053  0065 
+          SUP   H0004               JUMP TO      0065    11  1103  0057 
+          NZU   INITP               INITTP       0057    44  0020  0012 
+          RTN    8012              IF NOT EOF    0012    04  8012  0017 
+          NTS   INITP               THEN INIT    0017    25  0020  0022 
+          NEF   INITP   R1OK        ELSE R1OK    0022    54  0020  0077 
+1              SOAP TAPE LIBRARY             
+1              HEADER CARD                   
+1              AS READ WITH RD1              
+ H0001     00    0000    0000                    1100    00  0000  0000 
+ H0002     77    0083    6177                    1101    77  0083  6177 
+ H0003     00    7369    6279                    1102    00  7369  6279 
+ H0004     82    7661    6561                    1103    82  7661  6561 
+ H0005     79    8800    0000                    1104    79  8800  0000 
+ H0006     00    0000    0000                    1105    00  0000  0000 
+ H0007     00    0000    9999                    1106    00  0000  9999 
+ H0008     00    0000    9999                    1107    00  0000  9999 
+ H0009     00    0000    9999                    1108    00  0000  9999 
+ H0010     09    9800    0000                    1109    09  9800  0000 
+1                                            
+1                   LIBRARY TAPE FIRST RECORD
+1                   DOES NOT MATCH EXPECTED  
+1                   CREATE A NEW LIB TAPE    
+1                   WITH EXPECTED FIRST RECOD
+1                   (THE LIBRARY HEADER)     
+1                                            
+ INITP    RWD    8012              WRT HEADER    0020    55  8012  0025 
+          SET    9050              REC IN TAP    0025    27  9050  0030 
+          LDI   H0001                            0030    09  1100  0002 
+          SET    9050                            0002    27  9050  0107 
+          WTN    8012                            0107    06  8012  0062 
+          NTS   WHOK                             0062    25  0016  0067 
+ WRHLT    HLT    0999    9999      HLT IF WR     0000    01  0999  9999 
+ WHOK     WTM    8012              WRITE DOUB    0016    56  8012  0021 
+          WTM    8012              TAPE MARK     0021    56  8012  0026 
+          NTS   R1OK    WRHLT                    0026    25  0077  0000 
+1                                            
+1                   READ FIRST CARD AND      
+1                   SCAN TAPE LIB FOR ROUTINE
+1                                            
+ R1OK     RWD    8012                            0077    55  8012  0032 
+          RD1    1999   BB817                    0032    70  1999  0049 
+ BB817    LDD   H0010              INIT EMPTY    0049    69  1109  0112 
+          STD   EMFLG              FILE FLAG     0112    24  0115  0018 
+          RAU           SET        TEST 1ST      0018    60  0071  0075 
+          RAL    1951              AL IS RDC     0071    65  1951  0105 
+          STU   EMFLG              FILE NOT E    0105    21  0115  0068 
+          SLO    9050              CMP WITH T    0068    16  9050  0125 
+          NZE   PASS    FOUND       NO     YE    0125    45  0028  0029 
+ SETBL    SET    9050              TRSFR TAPE    0050    27  9050  0155 
+          SIB    1951    1998      TO CD AREA    0155    28  1951  1998 
+ SET      SET    9050               READ TAPE    0075    27  9050  0080 
+          RTN    8012   NTS                      0080    04  8012  0085 
+ NTS      NTS    8001                            0085    25  8001  0040 
+          NEF           EXIT                     0040    54  0044  0045 
+          NZE           HALT                     0044    45  0048  0099 
+          SLT    0001              REREAD        0048    35  0001  0205 
+          BST    8012   SET         ROUTINE      0205    57  8012  0075 
+ HALT     HLT    0888    9999                    0099    01  0888  9999 
+ PASS     RAU            8001       BYPASS       0028    60  0031  8001 
+          RTC    8012   NTS         ROUTINE      0031    03  8012  0085 
+ EXIT     RAL   EMFLG              IF FILE NO    0045    65  0115  0069 
+          NZE           BB817       TRY NEXT     0069    45  0072  0049 
+          BST    8012   NFND                     0072    57  8012  0127 
+ EMFLG     00    0000    0000      EMPTY FILE    0115    00  0000  0000 
+1                                            
+1                   CARD ROUTINE FOUND INTO  
+1                   LIBRARY TAPE             
+1                                            
+ FOUND    HLT    0777    9999                    0029    01  0777  9999 
+1                                            
+1                   CARD ROUTINE NOT FOUND   
+1                   ADD IT TO LIBRARY TAPE   
+1                                            
+ NFND     SET    9050                            0127    27  9050  0082 
+          LDI    1951                            0082    09  1951  0003 
+          SET    9050                            0003    27  9050  0008 
+          WTN    8012              WRT CRD       0008    06  8012  0063 
+          NTS           WRHLT       TO TAPE      0063    25  0117  0000 
+          RD1    1998   NFND                     0117    70  1998  0127 
+  1998    WTM    8012              LOAD CARD     1998    56  8012  0053 
+          WTM    8012               IS EOF       0053    56  8012  0058 
+          NTS   R1OK    WRHLT                    0058    25  0077  0000 
+1                                            
+1                   IF FIRST CARD IS LOAD CAR
+1                   THEN WILLPRINT LIST OF   
+1                   ROUTINES IN TAPE.        
+1                   PUNCH ROUTINE LOCATION   
+1                   (FIRST RECORD OF FILE)   
+1                   AND NUMBER OF ROUTINE    
+1                                            
+ I1XXX     00    0001    0000                    0100    00  0001  0000 
+ PCHFM     80    0000    0000      PCH FORMAT    0150    80  0000  0000 
+  1999    RWD    8012              REWIND TAP    1999    55  8012  0004 
+          LDD   ZERO                             0004    69  1100  0103 
+          STD   P0002                            0103    24  1978  0081 
+          STD   P0003                            0081    24  1979  0132 
+          STD   P0004                            0132    24  1980  0033 
+          STD   P0005                            0033    24  1981  0034 
+          STD   P0006                            0034    24  1982  0135 
+          STD   P0007                            0135    24  1983  0036 
+          STD   P0008                            0036    24  1984  0037 
+          STD   P0009                            0037    24  1985  0038 
+          RAU   PCHFM                            0038    60  0150  0255 
+          STU   P0010   SET2                     0255    21  1986  0039 
+ SET2     SET    9050              READ TAPE     0039    27  9050  0094 
+          RTN    8012              1ST REC       0094    04  8012  0149 
+          NTS   RDOK2                            0149    25  0153  0054 
+          NEF           ENDF                     0054    54  0108  0009 
+          NZE           HALT                     0108    45  0162  0099 
+          SLT    0001              REREAD        0162    35  0001  0119 
+          BST    8012   SET2       ROUTINE       0119    57  8012  0039 
+ RDOK2    LDD    9050              ROUTINE       0153    69  9050  0059 
+          STD   P0001               LOCATION     0059    24  1977  0130 
+          WR1    1977   SKP2        PUNCH        0130    71  1977  0177 
+ SKP2     RTC    8012              SKIP ROUTI    0177    03  8012  0182 
+          NTS   SKP2                             0182    25  0177  0087 
+          NEF   HALT                             0087    54  0099  0042 
+          RAL   P0008              INCR          0042    65  1984  0089 
+          ALO   I1XXX               ROUTINE      0089    15  0100  0305 
+          STL   P0008   SET2        NUMBER       0305    20  1984  0039 
+          WR1    1977   SET2                     1984    71  1977  0039 
+ ENDF     RWD    8012                            0009    55  8012  0014 
+          HLT    0000   R1OK                     0014    01  0000  0077 
+1                                            
+1              LIBRARIAN PROGRAM ADDS ROUTINE
+1              CARDS TO LIBRARY TAPE SO THEY 
+1                                            
+1              ENTRY POINTS                  
+1                 1000 INPUT                 
+1                      ROUTINE 1 DECK CARD   
+1                        (A LOAD CARD)       
+1                      ROUTINE 2 DECK CARD   
+1                        (A LOAD CARD)       
+1                      ...                   
+1                      ROUTINE N DECK CARD   
+1                        (A LOAD CARD)       
+1                        (A SECOND LOAD CARD)
+1                   ADD ROUTINES TO LIBRARY T
+1                   THEN PRINT LIST OF ROUTIN
+1                   IN LIBRARY TAPE          
+1                   IF LAST REPEATED LOAD CAR
+1                   REMOVED, NO PRINTOUT IS I
+1                                            
+1                 1998                       
+1                   PUT A DOUBLE TAPE MARK (E
+1                   FILE) TO CLOSE THE LIB TA
+1                                            
+1                 1999                       
+1                   PRINT LIST OF ROUTINES   
+1                   IN LIBRARY TAPE          
+1                                            
+1              STOPS                         
+1                 0999 WRITE ERROR           
+1                 0888 READ ERROR            
+1                 0777 ROUTINE ALREADY IN LIB
+1                                            
+
+I/O Error, IC: 01010 ( 7019991998+   RD1   1999  1998 )
+***
+*** Read assembled program deck
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD1   1951  9999 )
+***
+*** Run assembled program
+***
+                                                 0000    00  0000  0000 
+ SUB1                                            0001    00  0000  0000 
+ SUB2                                            0002    00  0000  0000 
+
+Programmed Stop, IC: 00014 ( 0100000077+   HLT   0000  0077 )
+/home/pi/simh/I650/sw/run_soap4.ini-24> at mt2 soaplib.tap
+%SIM-INFO: MT2: Tape Image 'soaplib.tap' scanned as SIMH format
+***
+*** Load SOAP4 deck into drum
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD1   1951  9999 )
+***
+*** Assemble source deck
+***
+1                   SOAP TEST TAP            
+1                                            
+          EQU   SUB1     1000                
+1                                            
+ SUB1     NOP    0000   SUB2           COMMEN    1000    00  0000  0004 
+1              SUB2 TAP                      
+ SUB2     NOP    0002              COMMENT       0004    00  0002  0008 
+          HLT    0002                            0008    01  0002  0012 
+1                                            
+          HLT    0001                            0012    01  0001  0016 
+          PST                                
+          EQU   SUB1     1000                
+          EQU   SUB2     0004                
+
+I/O Error, IC: 00653 ( 7019991998+   RD1   1999  1998 )
+***
+*** Read assembled program deck
+***
+
+I/O Error, IC: 08000 ( 7019519999+   RD1   1951  9999 )
+***
+*** Run assembled program
+***
+
+Programmed Stop, IC: 00008 ( 0100020012+   HLT   0002  0012 )
+Soap4 Ok
+** Test: passed.
+
+
+** clean up temp files generated during tests 
+
+
+!! All Tests Passed !!
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./imlac/imlac_sys.c ./imlac/imlac_cpu.c ./imlac/imlac_dp.c ./imlac/imlac_crt.c ./imlac/imlac_kbd.c ./imlac/imlac_tty.c ./imlac/imlac_pt.c ./imlac/imlac_bel.c ./display/display.c ./display/sim_ws.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./imlac -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/imlac -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/imlac RegisterSanityCheck  </dev/null 
+ Running internal register sanity checks on Imlac simulator.
+*** Good Registers in Imlac simulator.
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./tt2500/tt2500_sys.c ./tt2500/tt2500_cpu.c ./tt2500/tt2500_dpy.c ./tt2500/tt2500_crt.c ./tt2500/tt2500_tv.c ./tt2500/tt2500_key.c ./tt2500/tt2500_uart.c ./tt2500/tt2500_rom.c ./display/display.c ./display/sim_ws.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./tt2500 -DUSE_DISPLAY -DHAVE_LIBSDL -DUSE_SIM_VIDEO `sdl2-config --cflags` `sdl2-config --libs` -DUSE_READER_THREAD -DSIM_ASYNCH_IO -o BIN/tt2500 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/tt2500 RegisterSanityCheck /home/pi/simh/tt2500/tests/tt2500_test.ini </dev/null 
+ Running internal register sanity checks on TT2500 simulator.
+*** Good Registers in TT2500 simulator.
+
+TT2500 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+
+Breakpoint, PC: 01235 (A r0 r0)
+
+*** TEST PASSED
+
+gcc -std=gnu99 -U__STRICT_ANSI__  -O2 -DNDEBUG=1 -finline-functions -fgcse-after-reload -fpredictive-commoning -fipa-cp-clone -fno-unsafe-loop-optimizations -fno-strict-overflow -DSIM_GIT_COMMIT_ID=6e9324e09f4f364346310de34849077c986c29f2 -DSIM_GIT_COMMIT_TIME=2025-09-10T21:52:47+0300  -DSIM_COMPILER="GCC Version: 12.2.0" -DSIM_BUILD_TOOL=simh-makefile -I . -Werror -D_GNU_SOURCE -DHAVE_PCRE_H -DHAVE_SEMAPHORE -DHAVE_SYS_IOCTL -DHAVE_LINUX_CDROM -DSIM_HAVE_DLOPEN=so -DHAVE_EDITLINE -DHAVE_UTIME -DHAVE_ZLIB -DHAVE_GLOB -DHAVE_SHM_OPEN  ./SEL32/sel32_cpu.c ./SEL32/sel32_sys.c ./SEL32/sel32_chan.c ./SEL32/sel32_iop.c ./SEL32/sel32_com.c ./SEL32/sel32_con.c ./SEL32/sel32_clk.c ./SEL32/sel32_mt.c ./SEL32/sel32_lpr.c ./SEL32/sel32_scfi.c ./SEL32/sel32_fltpt.c ./SEL32/sel32_disk.c ./SEL32/sel32_hsdp.c ./SEL32/sel32_mfp.c ./SEL32/sel32_scsi.c ./SEL32/sel32_ec.c ./SEL32/sel32_ipu.c ./scp.c ./sim_console.c ./sim_fio.c ./sim_timer.c ./sim_sock.c ./sim_tmxr.c ./sim_ether.c ./sim_tape.c ./sim_disk.c ./sim_serial.c ./sim_video.c ./sim_imd.c ./sim_card.c -I ./SEL32 -DUSE_INT32 -DSEL32  -DHAVE_PCAP_NETWORK -I/usr/include/ -DBPF_CONST_STRING -DUSE_SHARED -DHAVE_TAP_NETWORK -Islirp -Islirp_glue -Islirp_glue/qemu -DHAVE_SLIRP_NETWORK -DUSE_SIMH_SLIRP_DEBUG slirp/*.c slirp_glue/*.c -o BIN/sel32 -lm -lrt -lpthread -lpcre -ldl -ledit -ltermcap -lz  
+BIN/sel32 RegisterSanityCheck /home/pi/simh/SEL32/tests/sel32_test.ini </dev/null 
+ Running internal register sanity checks on SEL-32 simulator.
+*** Good Registers in SEL-32 simulator.
+
+SEL-32 simulator Open SIMH V4.1-0 Current        git commit id: 6e9324e0
+/home/pi/simh/SEL32/tests/sel32_test.ini-132> at mta0 diag.tap
+%SIM-INFO: MTA0: Tape Image 'diag.tap' scanned as SIMH format
+MT Boot dev/unit 1000
+
+MEMORY INITIALIZATION STARTED...COMPLETED
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+BATCH PROCESSING FROM FILE * CV.ANT.J * BEGUN
+>NOTE CN/VM AUTO-NUCLEUS-TEST-FILE  #111039-002C 09FEB22 HEADER  CV.ANT.J
+>NOTE
+>NOTE
+>NOTE ===================================================================
+>NOTE   START   CN/VM   AUTOMATIC   NUCLEUS   DIAGNOSTIC   TESTING
+>NOTE ===================================================================
+>NOTE
+>NOTE
+>NOTE  VIRTUAL / CONCEPT DIAGNOSTIC REVISION 8.2.0
+>NOTE
+>NOTE
+>NOTE  AUTOBATCH DIAGNOSTIC
+>NOTE                                      MODIFIED for SEL32 09FEB2022
+>NOTE
+>NOTE                                                   JIM BEVIER
+>NOTE LOAD CV.CSL
+>NOTE RESE CV.CSL OPT 10 11
+>NOTE STAR CV.CSL @;
+>LOAD CV.CP1
+*LOADED: 'CV.CP1.E'
+ PGM: 03000
+>RESE CV.CP1 OPT 10 11
+>STAR CV.CP1 PASS(100)
+
+START CV.CP1.E (#111031-210E 25APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+CPU TYPE = 32/67
+
+
+END CV.CP1.E:      100 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.CP2
+*LOADED: 'CV.CP2.D'
+ PGM: 03000
+>RESE CV.CP2 OPT 10 11
+>STAR CV.CP2 PASS(100)
+
+ 
+
+START CV.CP2.D (#111031-211D 25APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+
+CPU TYPE = 32/67
+
+
+END CV.CP2.D:      100 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.CP3
+*LOADED: 'CV.CP3.F'
+ PGM: 03000
+>RESE CV.CP3 OPT 10 11
+>STAR CV.CP3 PASS(100)
+
+
+
+START CV.CP3.F (#111031-212F 25APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+
+CPU TYPE = 32/67
+
+
+END CV.CP3.F:      100 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.EAD
+*LOADED: 'CV.EAD.E'
+ PGM: 03000
+>RESE CV.EAD OPT 10 11
+>STAR CV.EAD PASS(4)
+
+START CV.EAD.E (#111031-230E  25APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+CPU TYPE = 32/67
+
+
+END CV.EAD.E:        4 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.BRD
+*LOADED: 'CV.BRD.J'
+ PGM: 03000
+>RESE CV.BRD OPT 10 11
+>STAR CV.BRD PASS(100)
+
+START CV.BRD.J (#121031-231J 26JUL88)
+  (C) COPYRIGHT 1984 GOULD INC., COMPUTER SYSTEMS  DIVISION
+ ALL RIGHTS RESERVED
+
+CPU TYPE = 32/67
+
+MEMORY CONFIGURATION:
+(000000-3FFFFC)  (1024KW)     PRESENT
+(400000-FFFFFC)  (3072KW) NON-PRESENT
+UNMAPPED     INTERVAL TIMER OFF       
+UNMAPPED     INTERVAL TIMER OFF       
+MAPPED       INTERVAL TIMER OFF       
+MAPPED       INTERVAL TIMER ON        
+
+END CV.BRD.J:      100 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.INT
+*LOADED: 'CV.INT.H'
+ PGM: 03000
+>RESE CV.INT OPT 10 11
+>STAR CV.INT PASS(4)
+
+START CV.INT.H (#111031-240H 25APR88)
+(C) COPYRIGHT 1983 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+CPU TYPE = 32/67
+
+MEMORY CONFIGURATION:
+(000000-3FFFFC)  (1024KW)      PRESENT
+(400000-FFFFFC)  (3072KW)  NON-PRESENT
+
+END CV.INT.H:        4 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.TRP
+*LOADED: 'CV.TRP.H'
+ PGM: 03000
+>RESE CV.TRP OPT 10 11
+>STAR CV.TRP PASS(4)
+
+START CV.TRP.H (#111031-241H 09MAY88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+CPU TYPE = 32/67
+
+
+MEMORY CONFIGURATION:
+(000000-3FFFFC)  (1024KW)      PRESENT
+(400000-FFFFFC)  (3072KW)  NON-PRESENT
+
+END CV.TRP.H:        4 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>NOTE LOAD CV.CMD
+>NOTE RESE CV.CMD OPT 10 11
+>NOTE STAR CV.CMD PASS(1)
+>LOAD CN.MMM
+*LOADED: 'CN.MMM.E'
+ PGM: 03000
+>RESE CN.MMM OPT 10 11
+>SET  CN.MMM OPT 20 23
+>STAR CN.MMM PASS(1)
+
+
+START CN.MMM.E (#111031-262E 28APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+CPU TYPE = 32/67
+
+
+
+END CN.MMM.E:          1  PASS(ES)
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD VM.MMM
+*LOADED: 'VM.MMM.C'
+ PGM: 03000
+>RESE VM.MMM OPT 10 11
+>SET  VM.MMM OPT 20 23
+>STAR VM.MMM PASS(1)
+
+
+START VM.MMM.C (#121031-262C 28APR88)
+(C) COPYRIGHT 1985 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+KERNEL ACCESS PROTECTION IMPLEMENTED
+CPU TYPE = 32/67
+
+
+FATAL ERROR - THIS DIAGNOSTIC IS NOT APPLICABLE TO THIS MACHINE TYPE.
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>NOTE LOAD CV.IPT
+>NOTE RESE CV.IPT OPT 10 11
+>NOTE STAR CV.IPT PASS(1)
+>NOTE LOAD CV.CSD
+>NOTE RESE CV.CSD OPT 10 11
+>NOTE SET  CV.CSD OPT 23
+>NOTE STAR CV.CSD PASS(1) @;
+>LOAD CV.CON
+*LOADED: 'CV.CON.F'
+ PGM: 03000
+>RESE CV.CON OPT 10 11 2
+>SET  CV.CON OPT 8
+>STAR CV.CON PASS(1)
+
+START CV.CON.F (#111031-911F 09MAY88)
+(C) COPYRIGHT 1984 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+CPU TYPE = 32/67
+THE ALPHABET (A-Z) A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+THE NUMBERS (ZERO-NINE) 0 1 2 3 4 5 6 7 8 9
+THE SPECIAL CHARACTERS:
+EXCLAMATION POINT     !     QUOTATION MARK        "
+NUMBER SIGN           #     DOLLAR SIGN           $
+PERCENT SIGN          %     AMPERSAND             &
+APOSTROPHE            '     LEFT PARENTHESIS      (
+RIGHT PARENTHESIS     )     ASTERISK              *
+PLUS SIGN             +     COMMA                 ,
+HYPHEN                -     PERIOD                .
+SLASH                 /     COLON                 :
+SEMICOLON             ;     LESS THAN SIGN        <
+EQUAL SIGN            =     GREATER THAN SIGN     >
+QUESTION MARK         ?     AT SIGN               @
+LEFT BRACKET          [     RIGHT BRACKET         ]
+SPACE                       REVERSE SLASH         \
+BELL                  
+
+..PRINTER TERMINATION  
+..KEYBOARD TERMINATION  
+..CHECK INVALID MEMORY ACCESS
+..CHECK PROGRAM VIOLATION  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_
+BCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_A
+CDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_AB
+DEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABC
+EFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCD
+FGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDE
+GHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEF
+HIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFG
+IJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGH
+JKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHI
+KLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJ
+LMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJK
+MNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKL
+NOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLM
+OPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMN
+PQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNO
+QRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOP
+RSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQ
+STUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQR
+TUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRS
+UVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRST
+VWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTU
+WXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUV
+XYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVW
+YZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWX
+Z0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXY
+0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ
+123456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0
+23456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ01
+3456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ012
+456789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123
+56789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ01234
+6789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ012345
+789 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456
+89 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567
+9 !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+ !"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+!"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 
+"#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !
+#$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"
+$%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#
+%&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$
+&'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%
+'()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&
+()*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'
+)*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'(
+*+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()
++,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*
+,-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+
+-./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,
+./:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-
+/:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-.
+:;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./
+;<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:
+<=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;
+=>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<
+>?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=
+?@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>
+@[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?
+[\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@
+\]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[
+]^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\
+^_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]
+_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^
+ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 !"#$%&'()*+,-./:;<=>?@[\]^_
+
+END CV.CON.F:        1 PASS(ES)
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>LOAD CV.DXP
+*LOADED: 'CV.DXP.N'
+ PGM: 03000
+>SET  CV.DXP OPT 3 4 5
+>STAR CV.DXP @50;;;
+
+
+
+
+GOULD C.S.D. DIAGNOSTIC EXECUTIVE (DXP #111032-900N 11JAN89)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+DEFAULT REAL-TIME CLOCK RATE= 60HZ ;[CR,#]? 50
+DEFAULT TIME-OF-DAY=00:00:00 ;[CR,HH:MM:SS]? 
+
+DO YOU NEED HELP ;[Y,N]? 
+
+DXP>BATCH CV.ANT.J  65-END
+>LOAD CV.ITD(CV.ITD) @;;;
+
+*WARNING: TASK 'CV.ITD.D' NOW 'CV.ITD  '
+
+*LOADED: 'CV.ITD  '
+ PGM: 001E000,   14220
+ BFI: 0021800,       4
+ BFO: 0021820,       4
+
+'CV.ITD  ' INITIALIZATION
+INTERVAL TIMER CHANNEL ADDRESS=7F ;[CR,##]? 
+INTERVAL TIMER=IOP/MFP  ;[CR,IOP/MFP,RTOM]? 
+SELECTED FREQUENCY RATE=38.4 ;[CR,?,####]? 
+'CV.ITD  ' INITIALIZATION COMPLETE
+
+>SET  CV.ITD OPT 2 6
+>RESE CV.ITD OPT 10 11
+>LOAD 67.FPT(67.FPT) @;;;;
+
+*WARNING: TASK '67.FPT.C' NOW '67.FPT  '
+
+*LOADED: '67.FPT  '
+ PGM: 0022000,   29044
+
+>RESE 67.FPT OPT 2 6
+>STAR 67.FPT PASS(1)
+
+START 67.FPT   (#671032-270C 03AUG84)
+(C) COPYRIGHT 1984 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+FLOATING POINT ACCELERATOR NOT PRESENT OR DISABLED
+>LOAD CV.MPM(CV.MPM) @;;;;
+NOTE:  FIRMWARE ALGORITHM USED FOR DIVIDE   SIMULATION
+'67.FPT  ' WHAT NEXT?? 
+
+*WARNING: TASK 'CV.MPM.D' NOW 'CV.MPM  '
+
+*LOADED: 'CV.MPM  '
+ PGM: 002A000,   12088
+
+'CV.MPM  ' INITIALIZATION
+MEMORY TEST TYPE=PRIVATE ;[CR,SHARED ]? 
+START ADDRESS =030000 ;[CR,######]? 
+STOP ADDRESS  =037FFC ;[CR,######]? 
+'CV.MPM  ' INITIALIZATION COMPLETE
+>SET  CV.MPM OPT 2 6
+>RESE CV.MPM OPT 10 11
+>STAR CV.MPM PASS(1)
+START CV.MPM   (#111032-251D  29JAN88)
+(C) COPYRIGHT 1984 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+
+CPU TYPE = 32/67
+
+>STAR CV.ITD PASS(1)
+
+START CV.ITD   (#111032-290D 10MAY88)
+(C) COPYRIGHT 1984 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+CPU TYPE = 32/67  
+>WAIT
+'CV.MPM  ' WHAT NEXT?? 
+'CV.ITD  ' WHAT NEXT?? 
+>EXIT
+*END-OF-BATCH ON *CV.ANT.J*:   0 ERRORS DETECTED DURING DEXP EXECUTION
+
+
+GOULD C.S.D. DIAGNOSTIC LOADER (DOL #111030-102G 06DEC88)
+(C) COPYRIGHT 1986 GOULD INC., COMPUTER SYSTEMS DIVISION
+ALL RIGHTS RESERVED
+>NOTE
+>NOTE ===================================================================
+>NOTE
+>NOTE
+>NOTE                SEL32 AUTOBATCH DIAGNOSTIC REV 8.2.0
+>NOTE
+>NOTE
+>NOTE                               BATCH RUN SUCCESSFUL
+>NOTE
+>NOTE
+>NOTE                                            JIM BEVIER
+>NOTE
+>NOTE
+>NOTE ===================================================================
+>NOTE   END   CN/VM   AUTOMATIC   NUCLEUS   DIAGNOSTIC   TESTING
+>NOTE ===================================================================
+BATCH PROCESSING FROM FILE * CV.ANT.J * ENDED (END-OF-FILE)
+DOL>
+*** PASSED - SEL32 Autobatch Diagnostic Successfully Completed
+
+[?2004hroot@spc11d-host:/home/pi/simh# exit
+[?2004lexit
+
+Script done on 2025-10-05 16:32:15-04:00 [COMMAND_EXIT_CODE="0"]
